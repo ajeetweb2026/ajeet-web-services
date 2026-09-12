@@ -6,10 +6,9 @@
 
 <title>Ajeet Web Services | Professional Business Websites</title>
 
-<meta name="description" content="Ajeet Web Services creates affordable, professional and mobile-friendly websites for small businesses and local services. Business websites starting from ₹2,999.">
+<meta name="description" content="Ajeet Web Services creates affordable, professional and mobile-friendly business websites for small businesses and local services.">
 
 <style>
-
 *{
   box-sizing:border-box;
 }
@@ -23,17 +22,13 @@ body{
   font-family:Arial,Helvetica,sans-serif;
   background:#f4f7f6;
   color:#17201c;
-  line-height:1.6;
 }
 
 header{
   background:linear-gradient(135deg,#061b12,#064e2b,#16a34a);
-  color:white;
+  color:#fff;
   padding:18px 20px;
   text-align:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
 }
 
 header h1{
@@ -42,21 +37,21 @@ header h1{
 }
 
 header p{
-  margin:6px 0 10px;
+  margin:6px 0 12px;
   color:#dcfce7;
 }
 
 nav a{
-  color:white;
+  color:#fff;
   text-decoration:none;
-  margin:0 8px;
+  margin:0 9px;
   font-size:14px;
   font-weight:bold;
 }
 
 .hero{
-  background:linear-gradient(180deg,#ffffff,#ecfdf5);
-  padding:55px 20px;
+  background:linear-gradient(180deg,#fff,#ecfdf5);
+  padding:45px 20px 55px;
 }
 
 .hero-container{
@@ -64,7 +59,7 @@ nav a{
   margin:auto;
   display:flex;
   align-items:center;
-  gap:40px;
+  gap:45px;
 }
 
 .hero-text{
@@ -75,17 +70,17 @@ nav a{
   display:inline-block;
   background:#dcfce7;
   color:#166534;
-  padding:7px 13px;
+  padding:7px 14px;
   border-radius:30px;
   font-size:14px;
   font-weight:bold;
-  margin-bottom:14px;
+  margin-bottom:15px;
 }
 
 .hero h2{
-  font-size:44px;
+  font-size:42px;
   line-height:1.15;
-  margin:0 0 18px;
+  margin:0 0 16px;
 }
 
 .hero h2 span{
@@ -95,18 +90,17 @@ nav a{
 .hero p{
   font-size:18px;
   color:#4b5563;
-  margin-bottom:20px;
 }
 
 .price{
   display:inline-block;
   background:#052e1b;
-  color:white;
+  color:#fff;
   padding:11px 18px;
   border-radius:30px;
   font-size:20px;
   font-weight:bold;
-  margin:5px 0 18px;
+  margin:8px 0 18px;
 }
 
 .btn{
@@ -116,11 +110,6 @@ nav a{
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
-  transition:.2s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
 }
 
 .whatsapp{
@@ -133,23 +122,56 @@ nav a{
   color:white;
 }
 
-.hero-image{
+/* PHOTO + BULL */
+.hero-visual{
   flex:1;
+  max-width:470px;
+  margin:auto;
   text-align:center;
 }
 
-.hero-image img{
-  width:100%;
-  max-width:500px;
-  border-radius:18px;
-  box-shadow:0 12px 35px rgba(0,0,0,.18);
+.ajeet-photo{
+  width:135px;
+  height:135px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid #16a34a;
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+  display:block;
+  margin:0 auto -5px;
+  background:white;
+  position:relative;
+  z-index:2;
 }
 
-.image-credit{
-  font-size:10px;
-  color:#6b7280;
-  margin-top:8px;
+.photo-label{
+  margin:8px 0 4px;
+  font-size:15px;
+  font-weight:bold;
+  color:#166534;
 }
+
+.bull-card{
+  background:#052e1b;
+  border-radius:22px;
+  padding:18px 18px 12px;
+  box-shadow:0 14px 35px rgba(0,0,0,.18);
+}
+
+.bull-card img{
+  width:100%;
+  display:block;
+  border-radius:15px;
+  background:#fff;
+}
+
+.bull-caption{
+  color:#dcfce7;
+  font-size:13px;
+  margin-top:9px;
+}
+
+/* SECTIONS */
 
 section{
   max-width:1100px;
@@ -170,15 +192,15 @@ section{
 }
 
 .card{
-  background:white;
+  background:#fff;
   padding:25px;
   border-radius:14px;
   box-shadow:0 5px 20px rgba(0,0,0,.07);
 }
 
 .card h3{
-  margin-top:0;
   color:#15803d;
+  margin-top:0;
 }
 
 .card p{
@@ -187,26 +209,20 @@ section{
 
 .pricing{
   background:#052e1b;
-  color:white;
+  color:#fff;
   border-radius:18px;
   text-align:center;
   padding:40px 20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
 
 .pricing h2{
   margin-top:0;
-  font-size:32px;
 }
 
-.pricing .amount{
-  font-size:40px;
+.amount{
+  font-size:42px;
   font-weight:bold;
   color:#86efac;
-}
-
-.pricing p{
-  color:#d1fae5;
 }
 
 .portfolio{
@@ -214,7 +230,7 @@ section{
 }
 
 .portfolio-box{
-  background:white;
+  background:#fff;
   max-width:700px;
   margin:auto;
   padding:30px;
@@ -224,31 +240,29 @@ section{
 }
 
 .portfolio-box h3{
-  font-size:25px;
   color:#166534;
+  font-size:25px;
 }
 
 .view-btn{
   display:inline-block;
   background:#111827;
-  color:white;
+  color:#fff;
   padding:12px 20px;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
-  margin-top:10px;
 }
 
 .contact{
   max-width:none;
   background:linear-gradient(135deg,#052e1b,#064e3b);
-  color:white;
+  color:#fff;
   text-align:center;
 }
 
 .contact h2{
   font-size:34px;
-  margin-top:0;
 }
 
 .contact p{
@@ -265,7 +279,6 @@ footer{
 
 footer a{
   color:#86efac;
-  text-decoration:none;
 }
 
 @media(max-width:850px){
@@ -292,12 +305,12 @@ footer a{
   }
 
   nav a{
-    margin:3px;
     font-size:12px;
+    margin:3px;
   }
 
   .hero{
-    padding:38px 16px;
+    padding:35px 15px 45px;
   }
 
   .hero h2{
@@ -312,16 +325,15 @@ footer a{
     grid-template-columns:1fr;
   }
 
-  section{
-    padding:38px 16px;
-  }
-
   .section-title{
     font-size:27px;
   }
 
+  .ajeet-photo{
+    width:115px;
+    height:115px;
+  }
 }
-
 </style>
 </head>
 
@@ -330,7 +342,6 @@ footer a{
 <header>
 
 <h1>🚀 Ajeet Web Services</h1>
-
 <p>Professional Websites for Small Businesses</p>
 
 <nav>
@@ -349,9 +360,7 @@ footer a{
 
 <div class="hero-text">
 
-<div class="badge">
-🚀 Build Your Business Online
-</div>
+<div class="badge">🚀 Build Your Business Online</div>
 
 <h2>
 Professional Websites for
@@ -385,16 +394,29 @@ href="tel:7042913221">
 </div>
 
 
-<div class="hero-image">
+<!-- AJEET PHOTO ABOVE GREEN BULL -->
+
+<div class="hero-visual">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bull_-_Uptrend_Stockmarket.png"
-alt="Green Bull Stock Market Uptrend"
-loading="lazy"
->
+class="ajeet-photo"
+src="ajeet_kumar.jpeg"
+alt="Ajeet Web Services">
 
-<div class="image-credit">
-Bull - Uptrend Stockmarket · Wikimedia Commons · CC BY-SA 4.0
+<div class="photo-label">
+👨‍💻 Ajeet Kumar
+</div>
+
+<div class="bull-card">
+
+<img
+src="https://www.publicdomainpictures.net/pictures/390000/velka/bull-market.jpg"
+alt="Green Bull Stock Market">
+
+<div class="bull-caption">
+🐂 Bullish Growth • Digital Business • Online Success
+</div>
+
 </div>
 
 </div>
@@ -486,9 +508,7 @@ target="_blank">
 
 <div class="portfolio-box">
 
-<h3>
-Rakesh Kumar Transport
-</h3>
+<h3>Rakesh Kumar Transport</h3>
 
 <p>
 Professional transport website created for a
@@ -550,9 +570,7 @@ Designed to help your business get more enquiries online.
 
 <section class="contact" id="contact">
 
-<h2>
-📩 Need a Website for Your Business?
-</h2>
+<h2>📩 Need a Website for Your Business?</h2>
 
 <p>
 Tell me about your business and let's build your online presence.
@@ -580,13 +598,12 @@ href="tel:7042913221">
 
 <br><br>
 
-Stock-market bull image:
+Green Bull image:
 <a
-href="https://commons.wikimedia.org/wiki/File:Bull_-_Uptrend_Stockmarket.png"
+href="https://www.publicdomainpictures.net/en/view-image.php?image=397074&picture=bull-market"
 target="_blank">
-Wikimedia Commons
+Public Domain Pictures
 </a>
-· CC BY-SA 4.0
 
 </footer>
 
