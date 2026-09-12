@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ajeet Web Services | Professional Business Websites</title>
+<title>Ajeet Web Services | Professional Website Development</title>
 
-<meta name="description" content="Ajeet Web Services creates affordable, professional and mobile-friendly business websites for small businesses and local services.">
+<meta name="description" content="Ajeet Web Services creates professional, mobile-friendly and affordable business websites starting from ₹2,999.">
 
 <style>
 *{
@@ -20,15 +20,20 @@ html{
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:#f4f7f6;
+  background:#f5f7f6;
   color:#17201c;
+  line-height:1.6;
 }
 
 header{
-  background:linear-gradient(135deg,#061b12,#064e2b,#16a34a);
+  background:linear-gradient(135deg,#03150c,#064e2b,#16a34a);
   color:#fff;
   padding:18px 20px;
   text-align:center;
+  position:sticky;
+  top:0;
+  z-index:999;
+  box-shadow:0 4px 18px rgba(0,0,0,.15);
 }
 
 header h1{
@@ -37,8 +42,8 @@ header h1{
 }
 
 header p{
-  margin:6px 0 12px;
-  color:#dcfce7;
+  margin:5px 0 12px;
+  color:#d1fae5;
 }
 
 nav a{
@@ -50,16 +55,18 @@ nav a{
 }
 
 .hero{
-  background:linear-gradient(180deg,#fff,#ecfdf5);
-  padding:45px 20px 55px;
+  background:
+  radial-gradient(circle at top right,rgba(22,163,74,.14),transparent 35%),
+  linear-gradient(180deg,#fff,#ecfdf5);
+  padding:65px 20px;
 }
 
 .hero-container{
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
   display:flex;
   align-items:center;
-  gap:45px;
+  gap:60px;
 }
 
 .hero-text{
@@ -72,15 +79,16 @@ nav a{
   color:#166534;
   padding:7px 14px;
   border-radius:30px;
-  font-size:14px;
+  font-size:13px;
   font-weight:bold;
   margin-bottom:15px;
 }
 
 .hero h2{
-  font-size:42px;
-  line-height:1.15;
-  margin:0 0 16px;
+  font-size:50px;
+  line-height:1.08;
+  margin:0 0 18px;
+  letter-spacing:-1px;
 }
 
 .hero h2 span{
@@ -90,188 +98,282 @@ nav a{
 .hero p{
   font-size:18px;
   color:#4b5563;
+  max-width:600px;
 }
 
-.price{
-  display:inline-block;
-  background:#052e1b;
-  color:#fff;
-  padding:11px 18px;
-  border-radius:30px;
-  font-size:20px;
+.hero-price{
+  font-size:23px;
   font-weight:bold;
-  margin:8px 0 18px;
+  color:#166534;
+  margin:20px 0;
 }
 
 .btn{
   display:inline-block;
-  padding:13px 20px;
+  padding:14px 22px;
   margin:5px;
-  border-radius:8px;
+  border-radius:9px;
   text-decoration:none;
   font-weight:bold;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .whatsapp{
   background:#16a34a;
-  color:white;
+  color:#fff;
 }
 
 .call{
   background:#111827;
-  color:white;
+  color:#fff;
 }
 
-/* PHOTO + BULL */
-.hero-visual{
+/* PHOTO + BIG BULL */
+
+.visual{
   flex:1;
-  max-width:470px;
-  margin:auto;
+  max-width:510px;
   text-align:center;
 }
 
-.ajeet-photo{
-  width:135px;
-  height:135px;
+.profile-photo{
+  width:105px;
+  height:105px;
   object-fit:cover;
   border-radius:50%;
-  border:6px solid #16a34a;
+  border:5px solid #16a34a;
   box-shadow:0 8px 25px rgba(0,0,0,.18);
   display:block;
-  margin:0 auto -5px;
-  background:white;
-  position:relative;
-  z-index:2;
-}
-
-.photo-label{
-  margin:8px 0 4px;
-  font-size:15px;
-  font-weight:bold;
-  color:#166534;
-}
-
-.bull-card{
-  background:#052e1b;
-  border-radius:22px;
-  padding:18px 18px 12px;
-  box-shadow:0 14px 35px rgba(0,0,0,.18);
-}
-
-.bull-card img{
-  width:100%;
-  display:block;
-  border-radius:15px;
+  margin:0 auto 16px;
   background:#fff;
 }
 
-.bull-caption{
-  color:#dcfce7;
-  font-size:13px;
-  margin-top:9px;
+.profile-name{
+  font-weight:bold;
+  color:#166534;
+  font-size:14px;
+  margin-bottom:14px;
 }
 
-/* SECTIONS */
+.bull-box{
+  background:#fff;
+  border-radius:22px;
+  padding:14px;
+  box-shadow:0 14px 40px rgba(0,0,0,.15);
+  border:1px solid #d1fae5;
+}
+
+.bull-box img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:15px;
+}
 
 section{
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
-  padding:50px 20px;
+  padding:60px 20px;
 }
 
 .section-title{
   text-align:center;
-  font-size:32px;
-  margin:0 0 30px;
+  font-size:34px;
+  margin:0 0 12px;
+}
+
+.section-subtitle{
+  text-align:center;
+  color:#6b7280;
+  max-width:700px;
+  margin:0 auto 35px;
 }
 
 .cards{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:20px;
 }
 
 .card{
   background:#fff;
-  padding:25px;
-  border-radius:14px;
-  box-shadow:0 5px 20px rgba(0,0,0,.07);
+  padding:27px;
+  border-radius:16px;
+  box-shadow:0 6px 22px rgba(0,0,0,.07);
+  border:1px solid #e5e7eb;
 }
 
 .card h3{
-  color:#15803d;
   margin-top:0;
+  color:#15803d;
+  font-size:20px;
 }
 
 .card p{
+  color:#5b6470;
+  margin-bottom:0;
+}
+
+/* PRICING */
+
+.pricing-section{
+  background:#f0fdf4;
+  max-width:none;
+}
+
+.pricing-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.price-card{
+  background:#fff;
+  border-radius:18px;
+  padding:32px 25px;
+  border:1px solid #d1d5db;
+  box-shadow:0 7px 25px rgba(0,0,0,.07);
+  text-align:center;
+  position:relative;
+}
+
+.price-card.featured{
+  border:3px solid #16a34a;
+  transform:translateY(-8px);
+}
+
+.popular{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#16a34a;
+  color:#fff;
+  padding:6px 14px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.price-card h3{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+.price{
+  font-size:35px;
+  font-weight:bold;
+  color:#166534;
+  margin:14px 0;
+}
+
+.price-card ul{
+  list-style:none;
+  padding:0;
+  text-align:left;
+}
+
+.price-card li{
+  padding:8px 0;
+  border-bottom:1px solid #eef2f0;
   color:#4b5563;
 }
 
-.pricing{
-  background:#052e1b;
-  color:#fff;
-  border-radius:18px;
-  text-align:center;
-  padding:40px 20px;
+.price-card .btn{
+  width:100%;
+  margin:16px 0 0;
 }
 
-.pricing h2{
-  margin-top:0;
-}
+/* PORTFOLIO */
 
-.amount{
-  font-size:42px;
-  font-weight:bold;
-  color:#86efac;
-}
-
-.portfolio{
-  background:#ecfdf5;
+.portfolio-section{
+  background:#fff;
 }
 
 .portfolio-box{
-  background:#fff;
-  max-width:700px;
+  max-width:780px;
   margin:auto;
-  padding:30px;
-  border-radius:16px;
+  background:linear-gradient(135deg,#ecfdf5,#fff);
+  border-radius:20px;
+  padding:35px;
   text-align:center;
-  box-shadow:0 5px 20px rgba(0,0,0,.07);
+  border:1px solid #bbf7d0;
+  box-shadow:0 8px 30px rgba(0,0,0,.07);
 }
 
 .portfolio-box h3{
+  font-size:27px;
   color:#166534;
-  font-size:25px;
+  margin-top:0;
 }
 
 .view-btn{
   display:inline-block;
   background:#111827;
   color:#fff;
-  padding:12px 20px;
-  border-radius:8px;
+  padding:13px 22px;
+  border-radius:9px;
   text-decoration:none;
   font-weight:bold;
 }
 
+/* PROCESS */
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.process{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  text-align:center;
+}
+
+.process-number{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#dcfce7;
+  color:#166534;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 12px;
+}
+
+/* CONTACT */
+
 .contact{
   max-width:none;
-  background:linear-gradient(135deg,#052e1b,#064e3b);
+  background:linear-gradient(135deg,#03150c,#052e1b,#064e3b);
   color:#fff;
   text-align:center;
 }
 
 .contact h2{
-  font-size:34px;
+  font-size:38px;
+  margin-top:0;
 }
 
 .contact p{
   color:#d1fae5;
+  font-size:17px;
 }
 
 footer{
-  background:#03150c;
-  color:#b7c5bd;
+  background:#020a05;
+  color:#9ca3af;
   text-align:center;
   padding:22px 15px;
   font-size:13px;
@@ -281,7 +383,9 @@ footer a{
   color:#86efac;
 }
 
-@media(max-width:850px){
+/* MOBILE */
+
+@media(max-width:900px){
 
   .hero-container{
     flex-direction:column;
@@ -289,13 +393,32 @@ footer a{
   }
 
   .hero h2{
-    font-size:35px;
+    font-size:38px;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
   }
 
   .cards{
     grid-template-columns:repeat(2,1fr);
   }
 
+  .pricing-grid{
+    grid-template-columns:1fr;
+    max-width:500px;
+  }
+
+  .price-card.featured{
+    transform:none;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr;
+    max-width:600px;
+    margin:auto;
+  }
 }
 
 @media(max-width:550px){
@@ -310,11 +433,11 @@ footer a{
   }
 
   .hero{
-    padding:35px 15px 45px;
+    padding:45px 16px;
   }
 
   .hero h2{
-    font-size:30px;
+    font-size:31px;
   }
 
   .hero p{
@@ -325,15 +448,25 @@ footer a{
     grid-template-columns:1fr;
   }
 
+  section{
+    padding:45px 16px;
+  }
+
   .section-title{
     font-size:27px;
   }
 
-  .ajeet-photo{
-    width:115px;
-    height:115px;
+  .contact h2{
+    font-size:29px;
   }
+
+  .profile-photo{
+    width:85px;
+    height:85px;
+  }
+
 }
+
 </style>
 </head>
 
@@ -342,6 +475,7 @@ footer a{
 <header>
 
 <h1>🚀 Ajeet Web Services</h1>
+
 <p>Professional Websites for Small Businesses</p>
 
 <nav>
@@ -354,68 +488,65 @@ footer a{
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-container">
 
 <div class="hero-text">
 
-<div class="badge">🚀 Build Your Business Online</div>
+<div class="badge">
+🚀 YOUR BUSINESS DESERVES AN ONLINE PRESENCE
+</div>
 
 <h2>
-Professional Websites for
-<span>Growing Businesses</span>
+Turn Your Business Into A
+<span>Professional Website</span>
 </h2>
 
 <p>
-I create clean, professional and mobile-friendly websites
-for local businesses, shops and service providers.
+Modern, mobile-friendly and professional websites
+for shops, local businesses, service providers,
+transporters and freelancers.
 </p>
 
-<div class="price">
-Website Starting From ₹2,999/-
+<div class="hero-price">
+Starting From ₹2,999/-
 </div>
 
-<div>
-
-<a class="btn whatsapp"
-href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20need%20a%20business%20website."
+<a
+class="btn whatsapp"
+href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20want%20a%20website%20for%20my%20business."
 target="_blank">
-💬 WhatsApp Me
+💬 Get My Website
 </a>
 
-<a class="btn call"
+<a
+class="btn call"
 href="tel:7042913221">
-📞 Call Me
+📞 Call Now
 </a>
 
 </div>
 
-</div>
 
-
-<!-- AJEET PHOTO ABOVE GREEN BULL -->
-
-<div class="hero-visual">
+<div class="visual">
 
 <img
-class="ajeet-photo"
+class="profile-photo"
 src="ajeet_kumar.jpeg"
-alt="Ajeet Web Services">
+alt="Ajeet Kumar">
 
-<div class="photo-label">
-👨‍💻 Ajeet Kumar
+<div class="profile-name">
+Ajeet Kumar
 </div>
 
-<div class="bull-card">
+<div class="bull-box">
 
 <img
-src="https://www.publicdomainpictures.net/pictures/390000/velka/bull-market.jpg"
-alt="Green Bull Stock Market">
-
-<div class="bull-caption">
-🐂 Bullish Growth • Digital Business • Online Success
-</div>
+src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Bull_-_Uptrend_Stockmarket.png"
+alt="Green Stock Market Bull">
 
 </div>
 
@@ -426,43 +557,49 @@ alt="Green Bull Stock Market">
 </section>
 
 
+<!-- SERVICES -->
+
 <section id="services">
 
 <h2 class="section-title">
-💻 What I Can Build For You
+💻 Website Services
 </h2>
+
+<p class="section-subtitle">
+Everything you need to give your business a professional online presence.
+</p>
 
 <div class="cards">
 
 <div class="card">
 <h3>🌐 Business Website</h3>
 <p>
-Professional websites for shops, transporters,
-service providers and small businesses.
+Professional website for shops, companies,
+transporters and local services.
 </p>
 </div>
 
 <div class="card">
-<h3>📱 Mobile Friendly</h3>
+<h3>📱 Mobile Website</h3>
 <p>
-Your website will work smoothly on mobile,
-tablet and desktop devices.
+Designed to look clean and work properly
+on smartphones, tablets and computers.
 </p>
 </div>
 
 <div class="card">
-<h3>💬 WhatsApp & Call</h3>
+<h3>💬 WhatsApp Integration</h3>
 <p>
-Customers can contact your business directly
-through WhatsApp or phone.
+Customers can directly contact your business
+through WhatsApp and phone calls.
 </p>
 </div>
 
 <div class="card">
-<h3>📍 Local Business</h3>
+<h3>📍 Local Business Website</h3>
 <p>
-A simple online presence designed for local
-customers and service businesses.
+A strong online presence for businesses
+serving customers in their local area.
 </p>
 </div>
 
@@ -471,48 +608,180 @@ customers and service businesses.
 </section>
 
 
-<section id="pricing">
+<!-- PRICING -->
 
-<div class="pricing">
+<section class="pricing-section" id="pricing">
 
-<h2>💰 Simple & Affordable Pricing</h2>
+<h2 class="section-title">
+💰 Choose Your Website Plan
+</h2>
 
-<p>Professional Business Website</p>
+<p class="section-subtitle">
+Simple pricing for businesses of different sizes.
+</p>
 
-<div class="amount">
-₹2,999/-
+<div class="pricing-grid">
+
+
+<div class="price-card">
+
+<h3>Starter</h3>
+
+<div class="price">
+₹2,999
 </div>
 
-<p>
-Basic package. Final price may vary depending
-on your requirements.
-</p>
+<p>Perfect for a basic business presence.</p>
+
+<ul>
+<li>✅ 1-page website</li>
+<li>✅ Mobile-friendly design</li>
+<li>✅ Business information</li>
+<li>✅ Call button</li>
+<li>✅ WhatsApp button</li>
+<li>✅ Basic contact section</li>
+</ul>
 
 <a
 class="btn whatsapp"
-href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20want%20a%20website%20for%20my%20business."
+href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20want%20the%20Starter%20website%20package."
 target="_blank">
-💬 Get Started
+Choose Starter
 </a>
 
 </div>
 
+
+<div class="price-card featured">
+
+<div class="popular">
+MOST POPULAR
+</div>
+
+<h3>Professional</h3>
+
+<div class="price">
+₹4,999
+</div>
+
+<p>Best for growing local businesses.</p>
+
+<ul>
+<li>✅ Up to 5 sections</li>
+<li>✅ Premium mobile design</li>
+<li>✅ WhatsApp & Call buttons</li>
+<li>✅ Services / Pricing section</li>
+<li>✅ Portfolio section</li>
+<li>✅ Basic SEO setup</li>
+</ul>
+
+<a
+class="btn whatsapp"
+href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20want%20the%20Professional%20website%20package."
+target="_blank">
+Choose Professional
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>Premium</h3>
+
+<div class="price">
+₹7,999
+</div>
+
+<p>For businesses wanting a stronger online presence.</p>
+
+<ul>
+<li>✅ Multi-section website</li>
+<li>✅ Premium design</li>
+<li>✅ WhatsApp & Call</li>
+<li>✅ Portfolio / Gallery</li>
+<li>✅ Basic SEO setup</li>
+<li>✅ Custom business sections</li>
+</ul>
+
+<a
+class="btn whatsapp"
+href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20want%20the%20Premium%20website%20package."
+target="_blank">
+Choose Premium
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 
-<section class="portfolio" id="portfolio">
+<!-- PROCESS -->
+
+<section>
 
 <h2 class="section-title">
-🚚 My Recent Work
+⚡ How It Works
 </h2>
+
+<p class="section-subtitle">
+Simple process from idea to live website.
+</p>
+
+<div class="process-grid">
+
+<div class="process">
+<div class="process-number">1</div>
+<h3>Share Your Requirement</h3>
+<p>
+Tell me about your business and what you need.
+</p>
+</div>
+
+<div class="process">
+<div class="process-number">2</div>
+<h3>Website Development</h3>
+<p>
+I create the design and build your website.
+</p>
+</div>
+
+<div class="process">
+<div class="process-number">3</div>
+<h3>Go Live</h3>
+<p>
+Your website is published online and ready for customers.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio-section" id="portfolio">
+
+<h2 class="section-title">
+🚚 Recent Work
+</h2>
+
+<p class="section-subtitle">
+Example of a local business website created by Ajeet Web Services.
+</p>
 
 <div class="portfolio-box">
 
-<h3>Rakesh Kumar Transport</h3>
+<h3>
+Rakesh Kumar Transport
+</h3>
 
 <p>
-Professional transport website created for a
-local goods transport business in Lucknow.
+Professional goods transport website for a local
+transport business in Lucknow.
 </p>
 
 <a
@@ -527,58 +796,21 @@ View Live Website →
 </section>
 
 
-<section>
-
-<h2 class="section-title">
-⭐ Why Choose Ajeet Web Services?
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>💰 Affordable</h3>
-<p>
-Professional business websites starting from ₹2,999/-.
-</p>
-</div>
-
-<div class="card">
-<h3>⚡ Simple & Fast</h3>
-<p>
-Clean websites without unnecessary complexity.
-</p>
-</div>
-
-<div class="card">
-<h3>📞 Direct Contact</h3>
-<p>
-Customers can call or WhatsApp directly from your website.
-</p>
-</div>
-
-<div class="card">
-<h3>🎯 Business Focused</h3>
-<p>
-Designed to help your business get more enquiries online.
-</p>
-</div>
-
-</div>
-
-</section>
-
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-<h2>📩 Need a Website for Your Business?</h2>
+<h2>
+📩 Ready To Get Your Website?
+</h2>
 
 <p>
-Tell me about your business and let's build your online presence.
+Let's create a professional online presence for your business.
 </p>
 
 <a
 class="btn whatsapp"
-href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20need%20a%20business%20website."
+href="https://wa.me/917042913221?text=Hello%20Ajeet,%20I%20need%20a%20website%20for%20my%20business."
 target="_blank">
 💬 WhatsApp: 7042913221
 </a>
@@ -594,16 +826,7 @@ href="tel:7042913221">
 
 <footer>
 
-© 2026 Ajeet Web Services · Website Development
-
-<br><br>
-
-Green Bull image:
-<a
-href="https://www.publicdomainpictures.net/en/view-image.php?image=397074&picture=bull-market"
-target="_blank">
-Public Domain Pictures
-</a>
+© 2026 Ajeet Web Services · Professional Website Development
 
 </footer>
 
