@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ajeetweb2026.github.io/ajeet-web-services/sitemap.xml
