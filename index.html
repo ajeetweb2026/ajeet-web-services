@@ -10,11 +10,11 @@
 
 <title>Ajeet Web Services | Professional Website Development</title>
 
-<!-- Correct favicon filename from your GitHub repository -->
 <link rel="icon" type="image/png" href="fivicon.png">
 <link rel="shortcut icon" type="image/png" href="fivicon.png">
 
 <style>
+
 :root{
     --blue:#2563eb;
     --blue-dark:#1d4ed8;
@@ -43,11 +43,6 @@ body{
     min-height:100vh;
     line-height:1.6;
 
-    /*
-      Layered visual background:
-      flower + house + laptop/coding style images,
-      softened with translucent overlays.
-    */
     background:
         linear-gradient(
             120deg,
@@ -60,16 +55,19 @@ body{
         url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1800&q=80");
 
     background-repeat:no-repeat;
+
     background-position:
         center,
         85% 15%,
         15% 65%,
         10% 5%;
+
     background-size:
         cover,
         520px auto,
         520px auto,
         420px auto;
+
     background-attachment:fixed;
 }
 
@@ -96,7 +94,6 @@ body::before{
             rgba(37,99,235,.10),
             transparent 28%
         );
-
 }
 
 body::after{
@@ -436,6 +433,135 @@ header{
 .panel-price{
     color:#7dd3fc;
     font-weight:800;
+}
+
+/* =========================
+   FOUNDER SECTION
+========================= */
+
+.founder-section{
+    padding:85px 0;
+}
+
+.founder-grid{
+    display:grid;
+    grid-template-columns:.82fr 1.18fr;
+    align-items:center;
+    gap:45px;
+
+    padding:28px;
+
+    border-radius:30px;
+}
+
+.founder-photo-wrap{
+    position:relative;
+
+    padding:12px;
+
+    border-radius:26px;
+
+    background:rgba(255,255,255,.40);
+
+    border:1px solid rgba(255,255,255,.62);
+
+    box-shadow:0 20px 50px rgba(15,23,42,.12);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+}
+
+.founder-photo{
+    width:100%;
+    height:390px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:20px;
+}
+
+.founder-badge{
+    position:absolute;
+
+    left:28px;
+    bottom:28px;
+
+    padding:10px 15px;
+
+    background:rgba(255,255,255,.78);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    border-radius:14px;
+
+    box-shadow:0 10px 28px rgba(15,23,42,.12);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    font-size:13px;
+    font-weight:800;
+}
+
+.founder-content .eyebrow{
+    margin-bottom:7px;
+}
+
+.founder-content h2{
+    font-size:42px;
+
+    line-height:1.15;
+
+    margin-bottom:12px;
+
+    letter-spacing:-1px;
+}
+
+.founder-content h3{
+    font-size:20px;
+
+    color:var(--blue);
+
+    margin-bottom:15px;
+}
+
+.founder-content p{
+    color:#64748b;
+
+    margin-bottom:13px;
+
+    font-size:15px;
+}
+
+.founder-points{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin:22px 0;
+}
+
+.founder-point{
+    padding:15px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.48);
+
+    border:1px solid rgba(255,255,255,.60);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#334155;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 }
 
 /* =========================
@@ -1030,6 +1156,7 @@ footer a{
     }
 
     .hero-grid,
+    .founder-grid,
     .why-grid,
     .contact-grid{
         grid-template-columns:1fr;
@@ -1037,6 +1164,10 @@ footer a{
 
     .hero-card{
         transform:none;
+    }
+
+    .founder-grid{
+        padding:20px;
     }
 
     .service-grid,
@@ -1094,6 +1225,27 @@ footer a{
         font-size:28px;
     }
 
+    .founder-section{
+        padding:65px 0;
+    }
+
+    .founder-grid{
+        padding:17px;
+        gap:25px;
+    }
+
+    .founder-photo{
+        height:330px;
+    }
+
+    .founder-content h2{
+        font-size:33px;
+    }
+
+    .founder-points{
+        grid-template-columns:1fr;
+    }
+
     .service-grid,
     .price-grid,
     .feature-strip,
@@ -1121,25 +1273,25 @@ footer a{
         width:100%;
     }
 
-    /*
-      Mobile performance:
-      reduce the large background images slightly.
-    */
     body{
         background-attachment:scroll;
+
         background-size:
             cover,
             360px auto,
             360px auto,
             280px auto;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
     <div class="container navbar">
 
         <a href="#home" class="logo">
@@ -1147,15 +1299,41 @@ footer a{
         </a>
 
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a class="nav-cta" href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#pricing">Pricing</a>
+            </li>
+
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="#faq">FAQ</a>
+            </li>
+
+            <li>
+                <a class="nav-cta" href="#contact">
+                    Contact
+                </a>
+            </li>
+
         </ul>
 
     </div>
+
 </header>
 
 
@@ -1206,9 +1384,11 @@ footer a{
             <div class="hero-window">
 
                 <div class="window-bar">
+
                     <span class="window-dot"></span>
                     <span class="window-dot"></span>
                     <span class="window-dot"></span>
+
                 </div>
 
                 <div class="window-content">
@@ -1229,26 +1409,152 @@ footer a{
                     <div class="window-panel">
 
                         <div class="panel-row">
-                            <span>Responsive Design</span>
+
+                            <span>
+                                Responsive Design
+                            </span>
+
                             <span>✓</span>
+
                         </div>
 
                         <div class="panel-row">
-                            <span>Mobile Friendly</span>
+
+                            <span>
+                                Mobile Friendly
+                            </span>
+
                             <span>✓</span>
+
                         </div>
 
                         <div class="panel-row">
-                            <span>SEO Ready</span>
+
+                            <span>
+                                SEO Ready
+                            </span>
+
                             <span>✓</span>
+
                         </div>
 
                         <div class="panel-row">
-                            <span>Starting Price</span>
-                            <span class="panel-price">₹4,499</span>
+
+                            <span>
+                                Starting Price
+                            </span>
+
+                            <span class="panel-price">
+                                ₹4,499
+                            </span>
+
                         </div>
 
                     </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT / FOUNDER
+========================= -->
+
+<section class="founder-section" id="about">
+
+    <div class="container">
+
+        <div class="glass founder-grid">
+
+            <div class="founder-photo-wrap">
+
+                <img
+                    class="founder-photo"
+                    src="ajeet_kumar.jpeg"
+                    alt="Ajeet Kumar - Founder of Ajeet Web Services"
+                    loading="lazy">
+
+                <div class="founder-badge">
+                    👨‍💻 Founder • Ajeet Web Services
+                </div>
+
+            </div>
+
+
+            <div class="founder-content">
+
+                <div class="eyebrow">
+                    About Ajeet Web Services
+                </div>
+
+                <h2>
+                    Meet Ajeet Kumar
+                </h2>
+
+                <h3>
+                    Founder & Web Services Professional
+                </h3>
+
+                <p>
+                    I help small businesses, local businesses and professionals
+                    build a professional online presence through modern websites
+                    and practical digital solutions.
+                </p>
+
+                <p>
+                    My focus is on clean design, mobile-friendly websites,
+                    easy customer communication and search-friendly website
+                    structure.
+                </p>
+
+
+                <div class="founder-points">
+
+                    <div class="founder-point">
+                        🌐 Professional Websites
+                    </div>
+
+                    <div class="founder-point">
+                        📱 Mobile Responsive
+                    </div>
+
+                    <div class="founder-point">
+                        🔎 SEO-Friendly Structure
+                    </div>
+
+                    <div class="founder-point">
+                        💬 WhatsApp Integration
+                    </div>
+
+                </div>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="https://www.linkedin.com/in/ajeet-kumar-715621427/?locale=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary">
+
+                        LinkedIn Profile →
+
+                    </a>
+
+                    <a
+                        href="mailto:infoajeetkumar2@gmail.com"
+                        class="btn btn-glass">
+
+                        ✉️ Email Me
+
+                    </a>
 
                 </div>
 
@@ -1270,7 +1576,10 @@ footer a{
     <div class="container">
 
         <div class="section-head">
-            <div class="eyebrow">Services</div>
+
+            <div class="eyebrow">
+                Services
+            </div>
 
             <h2>
                 Everything Your Business Needs Online
@@ -1280,6 +1589,7 @@ footer a{
                 Professional digital solutions designed to make your business
                 look trustworthy and easy to find.
             </p>
+
         </div>
 
 
@@ -1287,9 +1597,13 @@ footer a{
 
             <div class="glass service-card">
 
-                <div class="service-icon">🌐</div>
+                <div class="service-icon">
+                    🌐
+                </div>
 
-                <h3>Website Development</h3>
+                <h3>
+                    Website Development
+                </h3>
 
                 <p>
                     Professional business websites built for desktop,
@@ -1301,9 +1615,13 @@ footer a{
 
             <div class="glass service-card">
 
-                <div class="service-icon">🎨</div>
+                <div class="service-icon">
+                    🎨
+                </div>
 
-                <h3>Modern Web Design</h3>
+                <h3>
+                    Modern Web Design
+                </h3>
 
                 <p>
                     Clean, attractive and conversion-focused layouts
@@ -1315,9 +1633,13 @@ footer a{
 
             <div class="glass service-card">
 
-                <div class="service-icon">🔎</div>
+                <div class="service-icon">
+                    🔎
+                </div>
 
-                <h3>SEO Setup</h3>
+                <h3>
+                    SEO Setup
+                </h3>
 
                 <p>
                     Search-friendly page structure and basic SEO
@@ -1329,9 +1651,13 @@ footer a{
 
             <div class="glass service-card">
 
-                <div class="service-icon">📍</div>
+                <div class="service-icon">
+                    📍
+                </div>
 
-                <h3>Local Business Websites</h3>
+                <h3>
+                    Local Business Websites
+                </h3>
 
                 <p>
                     Websites designed specially for local shops,
@@ -1343,9 +1669,13 @@ footer a{
 
             <div class="glass service-card">
 
-                <div class="service-icon">📱</div>
+                <div class="service-icon">
+                    📱
+                </div>
 
-                <h3>Mobile Responsive</h3>
+                <h3>
+                    Mobile Responsive
+                </h3>
 
                 <p>
                     A smooth browsing experience across all common
@@ -1357,9 +1687,13 @@ footer a{
 
             <div class="glass service-card">
 
-                <div class="service-icon">⚡</div>
+                <div class="service-icon">
+                    ⚡
+                </div>
 
-                <h3>Optimization</h3>
+                <h3>
+                    Optimization
+                </h3>
 
                 <p>
                     Lightweight layouts and clean code for a better
@@ -1386,23 +1720,54 @@ footer a{
         <div class="feature-strip">
 
             <div class="glass feature-box">
-                <strong>100%</strong>
-                <span>Responsive Layout</span>
+
+                <strong>
+                    100%
+                </strong>
+
+                <span>
+                    Responsive Layout
+                </span>
+
             </div>
 
-            <div class="glass feature-box">
-                <strong>24/7</strong>
-                <span>Online Availability</span>
-            </div>
 
             <div class="glass feature-box">
-                <strong>SEO</strong>
-                <span>Friendly Structure</span>
+
+                <strong>
+                    24/7
+                </strong>
+
+                <span>
+                    Online Availability
+                </span>
+
             </div>
 
+
             <div class="glass feature-box">
-                <strong>₹4,499</strong>
-                <span>Starting Price</span>
+
+                <strong>
+                    SEO
+                </strong>
+
+                <span>
+                    Friendly Structure
+                </span>
+
+            </div>
+
+
+            <div class="glass feature-box">
+
+                <strong>
+                    ₹4,499
+                </strong>
+
+                <span>
+                    Starting Price
+                </span>
+
             </div>
 
         </div>
@@ -1441,24 +1806,50 @@ footer a{
 
             <div class="glass price-card">
 
-                <h3>Starter</h3>
+                <h3>
+                    Starter
+                </h3>
 
                 <div class="price">
+
                     ₹4,499
-                    <small>starting</small>
+
+                    <small>
+                        starting
+                    </small>
+
                 </div>
 
                 <ul class="price-list">
-                    <li>✓ Professional business website</li>
-                    <li>✓ Mobile responsive design</li>
-                    <li>✓ Contact / WhatsApp button</li>
-                    <li>✓ Basic SEO setup</li>
-                    <li>✓ Clean modern layout</li>
+
+                    <li>
+                        ✓ Professional business website
+                    </li>
+
+                    <li>
+                        ✓ Mobile responsive design
+                    </li>
+
+                    <li>
+                        ✓ Contact / WhatsApp button
+                    </li>
+
+                    <li>
+                        ✓ Basic SEO setup
+                    </li>
+
+                    <li>
+                        ✓ Clean modern layout
+                    </li>
+
                 </ul>
 
-                <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20the%20Starter%20package."
-                   class="btn btn-primary">
+                <a
+                    href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20the%20Starter%20package."
+                    class="btn btn-primary">
+
                     Get Started
+
                 </a>
 
             </div>
@@ -1470,24 +1861,48 @@ footer a{
                     POPULAR
                 </div>
 
-                <h3>Business</h3>
+                <h3>
+                    Business
+                </h3>
 
                 <div class="price">
                     Custom
                 </div>
 
                 <ul class="price-list">
-                    <li>✓ Multi-section website</li>
-                    <li>✓ Portfolio section</li>
-                    <li>✓ WhatsApp integration</li>
-                    <li>✓ SEO-ready structure</li>
-                    <li>✓ Business-focused design</li>
-                    <li>✓ Custom sections</li>
+
+                    <li>
+                        ✓ Multi-section website
+                    </li>
+
+                    <li>
+                        ✓ Portfolio section
+                    </li>
+
+                    <li>
+                        ✓ WhatsApp integration
+                    </li>
+
+                    <li>
+                        ✓ SEO-ready structure
+                    </li>
+
+                    <li>
+                        ✓ Business-focused design
+                    </li>
+
+                    <li>
+                        ✓ Custom sections
+                    </li>
+
                 </ul>
 
-                <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20a%20Business%20website."
-                   class="btn btn-primary">
+                <a
+                    href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20a%20Business%20website."
+                    class="btn btn-primary">
+
                     Discuss Project
+
                 </a>
 
             </div>
@@ -1495,23 +1910,44 @@ footer a{
 
             <div class="glass price-card">
 
-                <h3>Custom</h3>
+                <h3>
+                    Custom
+                </h3>
 
                 <div class="price">
                     Let's Talk
                 </div>
 
                 <ul class="price-list">
-                    <li>✓ Fully custom design</li>
-                    <li>✓ Advanced features</li>
-                    <li>✓ Custom business sections</li>
-                    <li>✓ SEO setup</li>
-                    <li>✓ Special requirements</li>
+
+                    <li>
+                        ✓ Fully custom design
+                    </li>
+
+                    <li>
+                        ✓ Advanced features
+                    </li>
+
+                    <li>
+                        ✓ Custom business sections
+                    </li>
+
+                    <li>
+                        ✓ SEO setup
+                    </li>
+
+                    <li>
+                        ✓ Special requirements
+                    </li>
+
                 </ul>
 
-                <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20need%20a%20custom%20website."
-                   class="btn btn-primary">
+                <a
+                    href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20need%20a%20custom%20website."
+                    class="btn btn-primary">
+
                     Contact Us
+
                 </a>
 
             </div>
@@ -1551,8 +1987,6 @@ footer a{
 
         <div class="portfolio-grid">
 
-
-            <!-- RAKESH PROJECT -->
 
             <div class="glass project-card">
 
@@ -1609,19 +2043,20 @@ footer a{
 
                     </div>
 
-                    <a href="https://ajeetweb2026.github.io/rakesh-transport-lucknow/"
-                       target="_blank"
-                       rel="noopener"
-                       class="btn btn-primary">
+                    <a
+                        href="https://ajeetweb2026.github.io/rakesh-transport-lucknow/"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-primary">
+
                         View Live Project →
+
                     </a>
 
                 </div>
 
             </div>
 
-
-            <!-- AJEET PROJECT -->
 
             <div class="glass project-card">
 
@@ -1673,9 +2108,12 @@ footer a{
 
                     </div>
 
-                    <a href="#home"
-                       class="btn btn-primary">
+                    <a
+                        href="#home"
+                        class="btn btn-primary">
+
                         Current Website →
+
                     </a>
 
                 </div>
@@ -1717,35 +2155,70 @@ footer a{
         <div class="process-grid">
 
             <div class="glass step-card">
-                <div class="step-number">1</div>
-                <h3>Discuss</h3>
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Discuss
+                </h3>
+
                 <p>
                     Understand your business and requirements.
                 </p>
+
             </div>
 
+
             <div class="glass step-card">
-                <div class="step-number">2</div>
-                <h3>Design</h3>
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Design
+                </h3>
+
                 <p>
                     Create the structure and visual direction.
                 </p>
+
             </div>
 
+
             <div class="glass step-card">
-                <div class="step-number">3</div>
-                <h3>Develop</h3>
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Develop
+                </h3>
+
                 <p>
                     Build the website and optimize the layout.
                 </p>
+
             </div>
 
+
             <div class="glass step-card">
-                <div class="step-number">4</div>
-                <h3>Launch</h3>
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    Launch
+                </h3>
+
                 <p>
                     Publish the website and make it ready for customers.
                 </p>
+
             </div>
 
         </div>
@@ -1881,7 +2354,6 @@ footer a{
 
         <div class="faq">
 
-
             <details class="glass">
 
                 <summary>
@@ -1951,7 +2423,6 @@ footer a{
 
             </details>
 
-
         </div>
 
     </div>
@@ -1977,9 +2448,12 @@ footer a{
                 Let's create a professional online presence for your business.
             </p>
 
-            <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20discuss%20a%20website%20project."
-               class="btn btn-glass">
+            <a
+                href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20discuss%20a%20website%20project."
+                class="btn btn-glass">
+
                 Start Your Project →
+
             </a>
 
         </div>
@@ -2016,8 +2490,6 @@ footer a{
 
         <div class="contact-grid">
 
-
-            <!-- CONTACT INFO -->
 
             <div class="glass contact-card">
 
@@ -2083,8 +2555,6 @@ footer a{
                 </div>
 
 
-                <!-- SOCIAL ICONS -->
-
                 <div class="social-area">
 
                     <div class="social-title">
@@ -2094,61 +2564,52 @@ footer a{
                     <div class="social-icons">
 
 
-                        <!-- LINKEDIN - LIVE LINK -->
-
                         <a
                             class="social-icon social-linkedin"
                             href="https://www.linkedin.com/in/ajeet-kumar-715621427/?locale=en"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
-                            title="LinkedIn"
-                        >
+                            title="LinkedIn">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M6.94 8.5A1.94 1.94 0 1 0 6.94 4.62a1.94 1.94 0 0 0 0 3.88ZM5.2 9.94h3.48V20H5.2V9.94Zm5.66 0h3.34v1.38h.05c.47-.89 1.61-1.83 3.31-1.83 3.54 0 4.2 2.33 4.2 5.36V20h-3.47v-4.56c0-1.09-.02-2.49-1.52-2.49-1.52 0-1.75 1.19-1.75 2.41V20h-3.47V9.94Z"/>
+
                             </svg>
 
                         </a>
 
 
-                        <!-- FACEBOOK - LINK LATER -->
-
                         <span
                             class="social-icon social-facebook social-disabled"
-                            aria-label="Facebook link coming soon"
-                            title="Facebook link can be added later"
-                        >
+                            title="Facebook link can be added later">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M13.5 21v-7h2.4l.36-2.73H13.5V9.53c0-.79.22-1.33 1.35-1.33h1.53V5.76c-.27-.04-1.18-.11-2.25-.11-2.23 0-3.76 1.36-3.76 3.86v2.15H7.83V14h2.54v7h3.13Z"/>
+
                             </svg>
 
                         </span>
 
-
-                        <!-- INSTAGRAM - LINK LATER -->
 
                         <span
                             class="social-icon social-instagram social-disabled"
-                            aria-label="Instagram link coming soon"
-                            title="Instagram link can be added later"
-                        >
+                            title="Instagram link can be added later">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M7.3 2.5h9.4A4.8 4.8 0 0 1 21.5 7.3v9.4a4.8 4.8 0 0 1-4.8 4.8H7.3a4.8 4.8 0 0 1-4.8-4.8V7.3a4.8 4.8 0 0 1 4.8-4.8Zm0 2a2.8 2.8 0 0 0-2.8 2.8v9.4a2.8 2.8 0 0 0 2.8 2.8h9.4a2.8 2.8 0 0 0 2.8-2.8V7.3a2.8 2.8 0 0 0-2.8-2.8H7.3Zm9.9 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+
                             </svg>
 
                         </span>
 
 
-                        <!-- FIVERR - LINK LATER -->
-
                         <span
                             class="social-icon social-fiverr social-disabled"
-                            aria-label="Fiverr link coming soon"
-                            title="Fiverr link can be added later"
-                        >
+                            title="Fiverr link can be added later">
 
                             <strong style="font-size:20px;line-height:1;">
                                 fi
@@ -2156,15 +2617,12 @@ footer a{
 
                         </span>
 
-
                     </div>
 
                 </div>
 
             </div>
 
-
-            <!-- START PROJECT -->
 
             <div class="glass contact-card">
 
@@ -2177,12 +2635,14 @@ footer a{
                     discuss your website.
                 </p>
 
-
                 <div style="margin-top:22px;">
 
-                    <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20build%20a%20website."
-                       class="btn btn-primary">
+                    <a
+                        href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20build%20a%20website."
+                        class="btn btn-primary">
+
                         💬 Contact on WhatsApp
+
                     </a>
 
                 </div>
@@ -2196,18 +2656,18 @@ footer a{
 
                     <div class="social-icons">
 
-
                         <a
                             class="social-icon social-linkedin"
                             href="https://www.linkedin.com/in/ajeet-kumar-715621427/?locale=en"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
-                            title="Open LinkedIn"
-                        >
+                            title="Open LinkedIn">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M6.94 8.5A1.94 1.94 0 1 0 6.94 4.62a1.94 1.94 0 0 0 0 3.88ZM5.2 9.94h3.48V20H5.2V9.94Zm5.66 0h3.34v1.38h.05c.47-.89 1.61-1.83 3.31-1.83 3.54 0 4.2 2.33 4.2 5.36V20h-3.47v-4.56c0-1.09-.02-2.49-1.52-2.49-1.52 0-1.75 1.19-1.75 2.41V20h-3.47V9.94Z"/>
+
                             </svg>
 
                         </a>
@@ -2215,11 +2675,12 @@ footer a{
 
                         <span
                             class="social-icon social-facebook social-disabled"
-                            title="Facebook link can be added later"
-                        >
+                            title="Facebook link can be added later">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M13.5 21v-7h2.4l.36-2.73H13.5V9.53c0-.79.22-1.33 1.35-1.33h1.53V5.76c-.27-.04-1.18-.11-2.25-.11-2.23 0-3.76 1.36-3.76 3.86v2.15H7.83V14h2.54v7h3.13Z"/>
+
                             </svg>
 
                         </span>
@@ -2227,11 +2688,12 @@ footer a{
 
                         <span
                             class="social-icon social-instagram social-disabled"
-                            title="Instagram link can be added later"
-                        >
+                            title="Instagram link can be added later">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M7.3 2.5h9.4A4.8 4.8 0 0 1 21.5 7.3v9.4a4.8 4.8 0 0 1-4.8 4.8H7.3a4.8 4.8 0 0 1-4.8-4.8V7.3a4.8 4.8 0 0 1 4.8-4.8Zm0 2a2.8 2.8 0 0 0-2.8 2.8v9.4a2.8 2.8 0 0 0 2.8 2.8h9.4a2.8 2.8 0 0 0 2.8-2.8V7.3a2.8 2.8 0 0 0-2.8-2.8H7.3Zm9.9 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+
                             </svg>
 
                         </span>
@@ -2239,8 +2701,7 @@ footer a{
 
                         <span
                             class="social-icon social-fiverr social-disabled"
-                            title="Fiverr public link can be added later"
-                        >
+                            title="Fiverr public link can be added later">
 
                             <strong style="font-size:20px;line-height:1;">
                                 fi
@@ -2262,10 +2723,6 @@ footer a{
 
 </main>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -2293,59 +2750,52 @@ footer a{
 
                     <div class="social-icons">
 
-
-                        <!-- LinkedIn LIVE -->
-
                         <a
                             class="social-icon social-linkedin"
                             href="https://www.linkedin.com/in/ajeet-kumar-715621427/?locale=en"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
-                            title="LinkedIn"
-                        >
+                            title="LinkedIn">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M6.94 8.5A1.94 1.94 0 1 0 6.94 4.62a1.94 1.94 0 0 0 0 3.88ZM5.2 9.94h3.48V20H5.2V9.94Zm5.66 0h3.34v1.38h.05c.47-.89 1.61-1.83 3.31-1.83 3.54 0 4.2 2.33 4.2 5.36V20h-3.47v-4.56c0-1.09-.02-2.49-1.52-2.49-1.52 0-1.75 1.19-1.75 2.41V20h-3.47V9.94Z"/>
+
                             </svg>
 
                         </a>
 
 
-                        <!-- Facebook icon only -->
-
                         <span
                             class="social-icon social-facebook social-disabled"
-                            title="Facebook link can be added later"
-                        >
+                            title="Facebook link can be added later">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+
                                 <path d="M13.5 21v-7h2.4l.36-2.73H13.5V9.53c0-.79.22-1.33 1.35-1.33h1.53V5.76c-.27-.04-1.18-.11-2.25-.11-2.23 0-3.76 1.36-3.76 3.86v2.15H7.83V14h2.54v7h3.13Z"/>
+
                             </svg>
 
                         </span>
 
-
-                        <!-- Instagram icon only -->
 
                         <span
                             class="social-icon social-instagram social-disabled"
-                            title="Instagram link can be added later"
-                        >
+                            title="Instagram link can be added later">
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M7.3 2.5h9.4A4.8 4.8 0 0 1 21.5 7.3v9.4a4.8 4.8 0 0 1-4.8 4.8H7.3a4.8 4.8 0 0 1-4.8-4.8V7.3a4.8 4.8 0 0 1 4.8-4.8Zm0 2a2.8 2.8 0 0 0-2.8 2.8v9.4a2.8 2.8 0 0 0 2.8 2.8h9.4a2.8 2.8 0 0 0 2.8-2.8V7.3a2.8 2.8 0 0 0-2.8-2.8H7.3Zm9.9 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M7.3 2.5h9.4A4.8 4.8 0 0 1 21.5 7.3v9.4a4.8 4.8 0 0 1-4.8 4.8H7.3a4.8 4.8 0 0 1-4.8-4.8V7.3a4.8 4.8 0 0 1 4.8-4.8Zm0 2a2.8 2.8 0 0 0-2.8 2.8v9.4a2.8 2.8 0 0 0 2.8 2.8h9.4a2.8 2.8 0 0 0 2.8-2.8V7.3a2.8 2.8 0 0 0-2.8-2.8H7.3Zm9.9 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-0-6Z"/>
+
                             </svg>
 
                         </span>
 
 
-                        <!-- Fiverr icon only -->
-
                         <span
                             class="social-icon social-fiverr social-disabled"
-                            title="Fiverr link can be added later"
-                        >
+                            title="Fiverr link can be added later">
 
                             <strong style="font-size:20px;line-height:1;">
                                 fi
@@ -2370,6 +2820,10 @@ footer a{
 
                     <a href="#home">
                         Home
+                    </a>
+
+                    <a href="#about">
+                        About
                     </a>
 
                     <a href="#services">
