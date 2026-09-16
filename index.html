@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Ajeet Web Services - Professional website development, SEO and digital services for small businesses.">
-
-<meta name="keywords" content="website development, web design, SEO, local SEO, Ajeet Web Services, Lucknow">
-
+<meta name="description" content="Ajeet Web Services - Professional website development for small businesses. Modern websites, responsive design and SEO-friendly solutions.">
+<meta name="keywords" content="Ajeet Web Services, website development, web design, SEO, business website, website developer India">
 <meta name="author" content="Ajeet Web Services">
 
 <title>Ajeet Web Services | Professional Website Development</title>
@@ -16,18 +13,48 @@
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
+:root{
+    --blue:#2563eb;
+    --blue-light:#60a5fa;
+    --dark:#07111f;
+    --text:#172033;
+    --muted:#64748b;
+    --white:rgba(255,255,255,.78);
+    --border:rgba(255,255,255,.45);
+    --shadow:0 25px 70px rgba(15,23,42,.12);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7f9fc;
-    color:#111827;
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text);
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(59,130,246,.16),transparent 28%),
+        radial-gradient(circle at 90% 20%,rgba(14,165,233,.12),transparent 25%),
+        radial-gradient(circle at 50% 90%,rgba(37,99,235,.10),transparent 30%),
+        linear-gradient(135deg,#f8fbff 0%,#eef5ff 45%,#f8fafc 100%);
     line-height:1.6;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+        linear-gradient(rgba(37,99,235,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(37,99,235,.03) 1px,transparent 1px);
+    background-size:40px 40px;
 }
 
 a{
@@ -35,10 +62,25 @@ a{
     color:inherit;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
+
 .container{
     width:92%;
-    max-width:1150px;
+    max-width:1180px;
     margin:auto;
+}
+
+/* GLASS */
+
+.glass{
+    background:rgba(255,255,255,.57);
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 }
 
 /* NAVBAR */
@@ -47,310 +89,389 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #e5e7eb;
+    background:rgba(255,255,255,.58);
+    border-bottom:1px solid rgba(255,255,255,.55);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 }
 
 .navbar{
-    min-height:72px;
+    min-height:74px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    gap:20px;
+    justify-content:space-between;
+    gap:25px;
 }
 
 .logo{
-    font-size:22px;
+    font-size:21px;
     font-weight:800;
+    letter-spacing:-.5px;
     color:#111827;
 }
 
 .logo span{
-    color:#2563eb;
+    color:var(--blue);
 }
 
 .nav-links{
     display:flex;
-    gap:25px;
+    align-items:center;
+    gap:24px;
     list-style:none;
 }
 
 .nav-links a{
     font-size:14px;
-    font-weight:600;
-    color:#374151;
+    font-weight:700;
+    color:#334155;
+    transition:.2s ease;
 }
 
 .nav-links a:hover{
-    color:#2563eb;
+    color:var(--blue);
 }
 
-.nav-btn{
-    background:#2563eb;
-    color:white !important;
-    padding:10px 17px;
-    border-radius:10px;
+.nav-cta{
+    padding:11px 17px;
+    background:var(--blue);
+    color:#fff !important;
+    border-radius:12px;
 }
 
 /* HERO */
 
 .hero{
-    min-height:650px;
+    min-height:720px;
     display:flex;
     align-items:center;
-    background:
-    radial-gradient(circle at 80% 20%,rgba(37,99,235,.15),transparent 30%),
-    radial-gradient(circle at 20% 80%,rgba(14,165,233,.10),transparent 30%),
-    #f8fafc;
+    padding:70px 0 90px;
 }
 
 .hero-grid{
     display:grid;
     grid-template-columns:1.1fr .9fr;
     align-items:center;
-    gap:50px;
+    gap:60px;
 }
 
-.badge{
-    display:inline-block;
-    background:#dbeafe;
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border:1px solid rgba(37,99,235,.15);
+    border-radius:999px;
+    background:rgba(255,255,255,.62);
     color:#1d4ed8;
-    padding:7px 14px;
-    border-radius:30px;
     font-size:13px;
-    font-weight:700;
+    font-weight:800;
     margin-bottom:20px;
+    backdrop-filter:blur(12px);
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,72px);
-    line-height:1.05;
-    letter-spacing:-2px;
+    font-size:clamp(44px,6vw,76px);
+    line-height:1.03;
+    letter-spacing:-3px;
     margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#2563eb;
+    color:var(--blue);
 }
 
-.hero p{
+.hero-text{
+    max-width:650px;
+    color:#5f6f85;
     font-size:18px;
-    color:#6b7280;
-    max-width:600px;
     margin-bottom:30px;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
-    gap:14px;
+    align-items:center;
     flex-wrap:wrap;
+    gap:14px;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 22px;
-    border-radius:12px;
-    font-weight:700;
-    transition:.2s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 21px;
+    border-radius:13px;
+    font-weight:800;
+    font-size:14px;
+    transition:.2s ease;
 }
 
 .btn-primary{
-    background:#2563eb;
-    color:white;
+    background:var(--blue);
+    color:#fff;
+    box-shadow:0 14px 30px rgba(37,99,235,.22);
 }
 
 .btn-primary:hover{
-    background:#1d4ed8;
     transform:translateY(-2px);
+    background:#1d4ed8;
 }
 
-.btn-secondary{
-    border:1px solid #d1d5db;
-    background:white;
+.btn-glass{
+    background:rgba(255,255,255,.55);
+    border:1px solid rgba(148,163,184,.25);
+    color:#1e293b;
+    backdrop-filter:blur(14px);
 }
 
-.btn-secondary:hover{
-    border-color:#2563eb;
-    color:#2563eb;
+.btn-glass:hover{
+    transform:translateY(-2px);
+    border-color:rgba(37,99,235,.3);
+    color:var(--blue);
 }
 
 /* HERO CARD */
 
 .hero-card{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:25px;
-    padding:30px;
-    box-shadow:0 25px 70px rgba(15,23,42,.10);
+    border-radius:30px;
+    padding:16px;
+    transform:rotate(1deg);
 }
 
-.code-window{
-    background:#111827;
-    color:#d1d5db;
-    border-radius:18px;
-    padding:22px;
-    font-family:monospace;
-    min-height:300px;
+.hero-window{
+    min-height:430px;
+    border-radius:22px;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 15% 15%,rgba(59,130,246,.35),transparent 30%),
+        radial-gradient(circle at 85% 80%,rgba(14,165,233,.20),transparent 25%),
+        linear-gradient(145deg,#08111f,#10233c);
+    color:#dbeafe;
+    position:relative;
 }
 
-.dot{
-    width:11px;
-    height:11px;
-    background:#64748b;
+.window-bar{
+    height:54px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:0 18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.window-dot{
+    width:10px;
+    height:10px;
     border-radius:50%;
-    display:inline-block;
-    margin-right:5px;
+    background:#64748b;
 }
 
-.code-text{
-    margin-top:25px;
+.window-content{
+    padding:30px;
+}
+
+.window-label{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#93c5fd;
+}
+
+.window-title{
+    font-size:34px;
+    line-height:1.15;
+    margin:13px 0;
+}
+
+.window-subtitle{
+    color:#cbd5e1;
     font-size:14px;
-    line-height:2;
+    max-width:390px;
 }
 
-.blue{
-    color:#60a5fa;
+.window-panel{
+    margin-top:28px;
+    padding:20px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:18px;
 }
 
-.green{
-    color:#4ade80;
+.panel-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,.07);
+    font-size:14px;
 }
 
-.yellow{
-    color:#facc15;
+.panel-row:last-child{
+    border-bottom:0;
 }
 
-/* SECTIONS */
-
-section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 50px;
-}
-
-.section-title span{
-    color:#2563eb;
+.panel-price{
+    color:#7dd3fc;
     font-weight:800;
 }
 
-.section-title h2{
-    font-size:40px;
-    margin:10px 0;
+/* SECTION */
+
+section{
+    padding:100px 0;
 }
 
-.section-title p{
-    color:#6b7280;
+.section-head{
+    max-width:760px;
+    margin:0 auto 55px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--blue);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:900;
+}
+
+.section-head h2{
+    font-size:42px;
+    line-height:1.15;
+    margin:10px 0 14px;
+    letter-spacing:-1px;
+}
+
+.section-head p{
+    color:var(--muted);
+    font-size:16px;
 }
 
 /* SERVICES */
 
-.cards{
+.service-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:22px;
 }
 
-.card{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:20px;
+.service-card{
     padding:30px;
-    transition:.25s;
+    border-radius:24px;
+    transition:.25s ease;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 40px rgba(15,23,42,.09);
+.service-card:hover{
+    transform:translateY(-7px);
 }
 
-.icon{
-    width:55px;
-    height:55px;
+.service-icon{
+    width:58px;
+    height:58px;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#eff6ff;
-    border-radius:15px;
-    font-size:25px;
+    border-radius:18px;
+    background:rgba(239,246,255,.9);
+    border:1px solid rgba(147,197,253,.28);
+    font-size:26px;
     margin-bottom:20px;
 }
 
-.card h3{
-    margin-bottom:10px;
+.service-card h3{
+    font-size:20px;
+    margin-bottom:9px;
 }
 
-.card p{
-    color:#6b7280;
-    font-size:15px;
+.service-card p{
+    color:#66758a;
+    font-size:14px;
 }
 
-/* STATS */
+/* FEATURE STRIP */
 
-.stats{
-    background:#111827;
-    color:white;
-}
-
-.stats-grid{
+.feature-strip{
     display:grid;
     grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.feature-box{
     text-align:center;
-    gap:20px;
+    padding:26px 18px;
+    border-radius:20px;
 }
 
-.stat h3{
-    font-size:38px;
-    color:#60a5fa;
+.feature-box strong{
+    display:block;
+    font-size:34px;
+    color:var(--blue);
+    margin-bottom:5px;
 }
 
-.stat p{
-    color:#cbd5e1;
+.feature-box span{
+    color:#64748b;
+    font-size:13px;
 }
 
 /* PRICING */
 
-.pricing{
+.price-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:23px;
 }
 
 .price-card{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:22px;
     padding:32px;
+    border-radius:26px;
+    position:relative;
 }
 
 .price-card.featured{
-    border:2px solid #2563eb;
-    transform:scale(1.03);
+    border:2px solid rgba(37,99,235,.42);
+    box-shadow:0 30px 80px rgba(37,99,235,.14);
+}
+
+.popular{
+    position:absolute;
+    top:18px;
+    right:18px;
+    background:var(--blue);
+    color:#fff;
+    font-size:11px;
+    padding:6px 10px;
+    border-radius:999px;
+    font-weight:800;
+}
+
+.price-card h3{
+    font-size:21px;
 }
 
 .price{
-    font-size:38px;
-    font-weight:800;
-    margin:15px 0;
+    font-size:42px;
+    font-weight:900;
+    margin:14px 0 20px;
+    letter-spacing:-1px;
 }
 
 .price small{
-    font-size:14px;
-    color:#6b7280;
+    font-size:13px;
+    color:#64748b;
+    font-weight:500;
 }
 
 .price-list{
     list-style:none;
-    margin:25px 0;
+    margin-bottom:25px;
 }
 
 .price-list li{
     padding:8px 0;
-    color:#4b5563;
+    color:#56657b;
+    font-size:14px;
 }
 
 /* PORTFOLIO */
@@ -361,175 +482,242 @@ section{
     gap:25px;
 }
 
-.project{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:22px;
+.project-card{
+    border-radius:26px;
     overflow:hidden;
 }
 
-.project-image{
-    height:230px;
-    background:linear-gradient(135deg,#111827,#2563eb);
+.project-preview{
+    min-height:245px;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:white;
-    font-size:28px;
-    font-weight:800;
+    padding:30px;
+    text-align:center;
+    background:
+        radial-gradient(circle at 20% 25%,rgba(96,165,250,.30),transparent 30%),
+        linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:#fff;
 }
 
-.project-content{
-    padding:25px;
+.project-preview h3{
+    font-size:30px;
+    line-height:1.1;
 }
 
-.project-content p{
-    color:#6b7280;
-    margin:10px 0 20px;
+.project-body{
+    padding:28px;
+}
+
+.project-body p{
+    color:#64748b;
+    margin:10px 0 18px;
+    font-size:14px;
 }
 
 .tags{
     display:flex;
     flex-wrap:wrap;
     gap:7px;
-    margin-bottom:20px;
+    margin-bottom:22px;
 }
 
 .tag{
-    background:#eff6ff;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:800;
     color:#1d4ed8;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:700;
+    background:#eff6ff;
+    border:1px solid #dbeafe;
 }
 
 /* PROCESS */
 
-.process{
+.process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    gap:18px;
 }
 
-.step{
+.step-card{
+    padding:27px;
+    border-radius:22px;
     text-align:center;
 }
 
 .step-number{
-    width:55px;
-    height:55px;
-    margin:0 auto 15px;
+    width:54px;
+    height:54px;
+    margin:0 auto 18px;
     border-radius:50%;
-    background:#2563eb;
-    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:20px;
-    font-weight:bold;
+    background:var(--blue);
+    color:#fff;
+    font-size:19px;
+    font-weight:900;
 }
 
-/* FAQ */
-
-.faq{
-    max-width:800px;
-    margin:auto;
+.step-card h3{
+    font-size:18px;
+    margin-bottom:8px;
 }
 
-details{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:14px;
-    margin-bottom:12px;
-    padding:18px 20px;
+.step-card p{
+    color:#64748b;
+    font-size:14px;
 }
 
-summary{
-    cursor:pointer;
-    font-weight:700;
-}
+/* WHY US */
 
-details p{
-    color:#6b7280;
-    margin-top:12px;
-}
-
-/* CTA */
-
-.cta{
-    background:#2563eb;
-    color:white;
-    border-radius:30px;
-    padding:70px 30px;
-    text-align:center;
-}
-
-.cta h2{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.cta p{
-    color:#dbeafe;
-    max-width:650px;
-    margin:0 auto 25px;
-}
-
-.cta .btn{
-    background:white;
-    color:#1d4ed8;
-}
-
-/* CONTACT */
-
-.contact-box{
+.why-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:25px;
 }
 
+.why-card{
+    padding:32px;
+    border-radius:25px;
+}
+
+.why-card h3{
+    font-size:22px;
+    margin-bottom:9px;
+}
+
+.why-card p{
+    color:#64748b;
+}
+
+.check-list{
+    list-style:none;
+    margin-top:18px;
+}
+
+.check-list li{
+    padding:8px 0;
+    color:#475569;
+    font-size:14px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:840px;
+    margin:auto;
+}
+
+details{
+    border-radius:17px;
+    padding:19px 22px;
+    margin-bottom:12px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:800;
+    color:#1e293b;
+}
+
+details p{
+    color:#64748b;
+    font-size:14px;
+    margin-top:10px;
+}
+
+/* CTA */
+
+.cta{
+    padding:70px 30px;
+    border-radius:32px;
+    text-align:center;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(96,165,250,.26),transparent 30%),
+        linear-gradient(135deg,#0b1220,#142d52);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.1);
+    box-shadow:0 30px 70px rgba(15,23,42,.18);
+}
+
+.cta h2{
+    font-size:43px;
+    line-height:1.15;
+    margin-bottom:13px;
+}
+
+.cta p{
+    max-width:650px;
+    color:#cbd5e1;
+    margin:0 auto 26px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:23px;
+}
+
 .contact-card{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:20px;
-    padding:30px;
+    padding:32px;
+    border-radius:25px;
 }
 
-.contact-item{
-    padding:15px 0;
-    border-bottom:1px solid #eee;
+.contact-card h3{
+    font-size:24px;
+    margin-bottom:8px;
 }
 
-.contact-item:last-child{
+.contact-card > p{
+    color:#64748b;
+}
+
+.contact-row{
+    padding:16px 0;
+    border-bottom:1px solid rgba(148,163,184,.18);
+}
+
+.contact-row:last-child{
     border-bottom:0;
 }
 
-.contact-item strong{
+.contact-row strong{
     display:block;
+    margin-bottom:3px;
+}
+
+.contact-row span,
+.contact-row a{
+    color:#64748b;
+    font-size:14px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#0f172a;
-    color:white;
-    padding:45px 0 25px;
+    padding:60px 0 25px;
+    background:#08111f;
+    color:#fff;
 }
 
 .footer-grid{
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
-    gap:30px;
+    gap:35px;
+}
+
+footer h3{
+    margin-bottom:12px;
 }
 
 footer p,
 footer a{
     color:#94a3b8;
-}
-
-footer h3{
-    margin-bottom:15px;
+    font-size:14px;
 }
 
 .footer-links{
@@ -538,86 +726,120 @@ footer h3{
     gap:8px;
 }
 
+.footer-links a:hover{
+    color:#fff;
+}
+
 .copyright{
     text-align:center;
-    border-top:1px solid #1e293b;
+    border-top:1px solid rgba(255,255,255,.08);
     margin-top:35px;
-    padding-top:20px;
+    padding-top:22px;
     color:#64748b;
+    font-size:12px;
 }
 
 /* MOBILE */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
     .nav-links{
         display:none;
     }
 
-    .hero-grid{
+    .hero{
+        padding-top:55px;
+    }
+
+    .hero-grid,
+    .why-grid,
+    .contact-grid{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        padding:70px 0;
+    .hero-card{
+        transform:none;
     }
 
-    .cards,
-    .pricing,
+    .service-grid,
+    .price-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature-strip{
+        grid-template-columns:repeat(2,1fr);
+    }
+
     .portfolio-grid{
         grid-template-columns:1fr;
     }
 
-    .stats-grid{
+    .process-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .process{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .contact-box,
     .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:91%;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:55px 0 75px;
+    }
+
+    .hero h1{
+        font-size:44px;
+        letter-spacing:-2px;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    .hero-window{
+        min-height:380px;
+    }
+
+    .window-title{
+        font-size:28px;
+    }
+
+    .service-grid,
+    .price-grid,
+    .feature-strip,
+    .process-grid{
         grid-template-columns:1fr;
     }
 
-    .price-card.featured{
-        transform:none;
-    }
-
-    .section-title h2{
-        font-size:32px;
+    .section-head h2{
+        font-size:33px;
     }
 
     .cta h2{
         font-size:32px;
     }
-}
 
-@media(max-width:500px){
-
-    .navbar{
-        min-height:65px;
-    }
-
-    .logo{
-        font-size:18px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .process{
+    .footer-grid{
         grid-template-columns:1fr;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-buttons{
+        width:100%;
     }
 }
 </style>
@@ -625,834 +847,741 @@ footer h3{
 
 <body>
 
-<!-- NAVBAR -->
-
 <header>
-<div class="container navbar">
+    <div class="container navbar">
 
-<a href="#home" class="logo">
-Ajeet <span>Web Services</span>
-</a>
+        <a href="#home" class="logo">
+            Ajeet <span>Web Services</span>
+        </a>
 
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#contact" class="nav-btn">Contact</a></li>
-</ul>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a class="nav-cta" href="#contact">Contact</a></li>
+        </ul>
 
-</div>
+    </div>
 </header>
 
 
+<main>
+
 <!-- HERO -->
-
 <section class="hero" id="home">
+    <div class="container hero-grid">
 
-<div class="container hero-grid">
+        <div>
 
-<div>
+            <div class="hero-badge">
+                ✦ Professional Web Solutions
+            </div>
 
-<div class="badge">
-🚀 Professional Web Solutions
-</div>
+            <h1>
+                Your Business.<br>
+                Your <span>Website.</span>
+            </h1>
 
-<h1>
-Build a Website<br>
-That <span>Works For You.</span>
-</h1>
+            <p class="hero-text">
+                Modern, responsive and professional websites for small businesses,
+                local businesses and growing brands.
+            </p>
 
-<p>
-Professional, responsive and SEO-friendly websites
-for small businesses, local businesses and growing brands.
-</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">
+                    View Our Work →
+                </a>
 
-<div class="buttons">
+                <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20a%20website."
+                   class="btn btn-glass">
+                    💬 WhatsApp
+                </a>
+            </div>
 
-<a href="#portfolio" class="btn btn-primary">
-View Our Work →
-</a>
-
-<a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20a%20website." class="btn btn-secondary">
-💬 WhatsApp
-</a>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="hero-card">
+        <div class="glass hero-card">
 
-<div class="code-window">
+            <div class="hero-window">
 
-<div>
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-</div>
+                <div class="window-bar">
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                </div>
 
-<div class="code-text">
+                <div class="window-content">
 
-<span class="blue">&lt;website&gt;</span><br>
+                    <div class="window-label">
+                        Ajeet Web Services
+                    </div>
 
-&nbsp;&nbsp;<span class="green">design</span> =
-<span class="yellow">"modern"</span><br>
+                    <div class="window-title">
+                        Professional Website Development
+                    </div>
 
-&nbsp;&nbsp;<span class="green">responsive</span> =
-<span class="yellow">true</span><br>
+                    <div class="window-subtitle">
+                        Clean design, responsive layout and
+                        business-focused web solutions.
+                    </div>
 
-&nbsp;&nbsp;<span class="green">seo</span> =
-<span class="yellow">"ready"</span><br>
+                    <div class="window-panel">
 
-&nbsp;&nbsp;<span class="green">business</span> =
-<span class="yellow">"online"</span><br>
+                        <div class="panel-row">
+                            <span>Responsive Design</span>
+                            <span>✓</span>
+                        </div>
 
-<span class="blue">&lt;/website&gt;</span>
+                        <div class="panel-row">
+                            <span>Mobile Friendly</span>
+                            <span>✓</span>
+                        </div>
 
-</div>
+                        <div class="panel-row">
+                            <span>SEO Ready</span>
+                            <span>✓</span>
+                        </div>
 
-</div>
+                        <div class="panel-row">
+                            <span>Starting Price</span>
+                            <span class="panel-price">₹4,499</span>
+                        </div>
 
-</div>
+                    </div>
 
-</div>
+                </div>
 
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 
 <!-- SERVICES -->
-
 <section id="services">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-head">
+            <div class="eyebrow">Services</div>
+            <h2>Everything Your Business Needs Online</h2>
+            <p>
+                Professional digital solutions designed to make your business
+                look trustworthy and easy to find.
+            </p>
+        </div>
 
-<span>WHAT WE DO</span>
+        <div class="service-grid">
 
-<h2>Everything You Need to Grow Online</h2>
+            <div class="glass service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Website Development</h3>
+                <p>
+                    Professional business websites built for desktop,
+                    tablet and mobile.
+                </p>
+            </div>
 
-<p>
-From website design to SEO, we help your business build a strong online presence.
-</p>
+            <div class="glass service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Modern Web Design</h3>
+                <p>
+                    Clean, attractive and conversion-focused layouts
+                    for your brand.
+                </p>
+            </div>
 
-</div>
+            <div class="glass service-card">
+                <div class="service-icon">🔎</div>
+                <h3>SEO Setup</h3>
+                <p>
+                    Search-friendly page structure and basic SEO
+                    configuration.
+                </p>
+            </div>
 
+            <div class="glass service-card">
+                <div class="service-icon">📍</div>
+                <h3>Local Business Websites</h3>
+                <p>
+                    Websites designed specially for local shops,
+                    services and businesses.
+                </p>
+            </div>
 
-<div class="cards">
+            <div class="glass service-card">
+                <div class="service-icon">📱</div>
+                <h3>Mobile Responsive</h3>
+                <p>
+                    A smooth browsing experience across all common
+                    screen sizes.
+                </p>
+            </div>
 
-<div class="card">
+            <div class="glass service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Optimization</h3>
+                <p>
+                    Lightweight layouts and clean code for a better
+                    overall user experience.
+                </p>
+            </div>
 
-<div class="icon">🌐</div>
+        </div>
 
-<h3>Website Development</h3>
-
-<p>
-Fast, responsive and professional websites designed for your business.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🎨</div>
-
-<h3>Web Design</h3>
-
-<p>
-Modern layouts, clean UI and mobile-friendly design that builds trust.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🔎</div>
-
-<h3>SEO</h3>
-
-<p>
-Search-engine friendly structure to help your website become discoverable.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">📍</div>
-
-<h3>Local SEO</h3>
-
-<p>
-Improve your local online presence and help customers find your business.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">📱</div>
-
-<h3>Mobile Responsive</h3>
-
-<p>
-Your website looks professional on mobile, tablet and desktop.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">⚡</div>
-
-<h3>Website Optimization</h3>
-
-<p>
-Clean code and lightweight design for a better user experience.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
 
-<!-- STATS -->
+<!-- FEATURES -->
+<section>
 
-<section class="stats">
+    <div class="container">
 
-<div class="container stats-grid">
+        <div class="feature-strip">
 
-<div class="stat">
-<h3>100%</h3>
-<p>Responsive Design</p>
-</div>
+            <div class="glass feature-box">
+                <strong>100%</strong>
+                <span>Responsive Layout</span>
+            </div>
 
-<div class="stat">
-<h3>24/7</h3>
-<p>Website Availability</p>
-</div>
+            <div class="glass feature-box">
+                <strong>24/7</strong>
+                <span>Online Availability</span>
+            </div>
 
-<div class="stat">
-<h3>SEO</h3>
-<p>Friendly Structure</p>
-</div>
+            <div class="glass feature-box">
+                <strong>SEO</strong>
+                <span>Friendly Structure</span>
+            </div>
 
-<div class="stat">
-<h3>₹2999+</h3>
-<p>Starting Price</p>
-</div>
+            <div class="glass feature-box">
+                <strong>₹4,499</strong>
+                <span>Starting Price</span>
+            </div>
 
-</div>
+        </div>
 
+    </div>
 </section>
 
 
 <!-- PRICING -->
-
 <section id="pricing">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
-
-<span>PRICING</span>
-
-<h2>Simple Website Packages</h2>
-
-<p>
-Choose a package according to your business requirements.
-</p>
-
-</div>
+        <div class="section-head">
+            <div class="eyebrow">Pricing</div>
+            <h2>Simple Website Packages</h2>
+            <p>
+                Choose a package based on your business requirements.
+            </p>
+        </div>
 
 
-<div class="pricing">
+        <div class="price-grid">
 
-<div class="price-card">
+            <div class="glass price-card">
 
-<h3>Starter</h3>
+                <h3>Starter</h3>
 
-<div class="price">
-₹2,999 <small>starting</small>
-</div>
+                <div class="price">
+                    ₹4,499
+                    <small>starting</small>
+                </div>
 
-<ul class="price-list">
+                <ul class="price-list">
+                    <li>✓ Professional business website</li>
+                    <li>✓ Mobile responsive design</li>
+                    <li>✓ Contact / WhatsApp button</li>
+                    <li>✓ Basic SEO setup</li>
+                    <li>✓ Clean modern layout</li>
+                </ul>
 
-<li>✓ Professional Website</li>
-<li>✓ Mobile Responsive</li>
-<li>✓ Contact / WhatsApp</li>
-<li>✓ Basic SEO Setup</li>
-<li>✓ Fast Loading Design</li>
+                <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20the%20Starter%20package."
+                   class="btn btn-primary">
+                    Get Started
+                </a>
 
-</ul>
-
-<a href="https://wa.me/917042913221?text=Hello%2C%20I%20want%20the%20Starter%20website%20package." class="btn btn-primary">
-Get Started
-</a>
-
-</div>
-
-
-<div class="price-card featured">
-
-<h3>Business</h3>
-
-<div class="price">
-Custom
-</div>
-
-<ul class="price-list">
-
-<li>✓ Multi-section Website</li>
-<li>✓ Portfolio</li>
-<li>✓ SEO Setup</li>
-<li>✓ Google Search Setup</li>
-<li>✓ WhatsApp Integration</li>
-<li>✓ Business-focused Design</li>
-
-</ul>
-
-<a href="https://wa.me/917042913221?text=Hello%2C%20I%20want%20a%20Business%20website." class="btn btn-primary">
-Discuss Project
-</a>
-
-</div>
+            </div>
 
 
-<div class="price-card">
+            <div class="glass price-card featured">
 
-<h3>Custom</h3>
+                <div class="popular">POPULAR</div>
 
-<div class="price">
-Let's Talk
-</div>
+                <h3>Business</h3>
 
-<ul class="price-list">
+                <div class="price">
+                    Custom
+                </div>
 
-<li>✓ Custom Design</li>
-<li>✓ Advanced Features</li>
-<li>✓ Custom Sections</li>
-<li>✓ SEO</li>
-<li>✓ Business Requirements</li>
+                <ul class="price-list">
+                    <li>✓ Multi-section website</li>
+                    <li>✓ Portfolio section</li>
+                    <li>✓ WhatsApp integration</li>
+                    <li>✓ SEO-ready structure</li>
+                    <li>✓ Business-focused design</li>
+                    <li>✓ Custom sections</li>
+                </ul>
 
-</ul>
+                <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20a%20Business%20website."
+                   class="btn btn-primary">
+                    Discuss Project
+                </a>
 
-<a href="https://wa.me/917042913221?text=Hello%2C%20I%20need%20a%20custom%20website." class="btn btn-primary">
-Contact Us
-</a>
+            </div>
 
-</div>
 
-</div>
+            <div class="glass price-card">
 
-</div>
+                <h3>Custom</h3>
 
+                <div class="price">
+                    Let's Talk
+                </div>
+
+                <ul class="price-list">
+                    <li>✓ Fully custom design</li>
+                    <li>✓ Advanced features</li>
+                    <li>✓ Custom business sections</li>
+                    <li>✓ SEO setup</li>
+                    <li>✓ Special requirements</li>
+                </ul>
+
+                <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20need%20a%20custom%20website."
+                   class="btn btn-primary">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 
 <!-- PORTFOLIO -->
-
 <section id="portfolio">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
-
-<span>OUR WORK</span>
-
-<h2>Featured Projects</h2>
-
-<p>
-Real websites and projects created for business use.
-</p>
-
-</div>
+        <div class="section-head">
+            <div class="eyebrow">Portfolio</div>
+            <h2>Featured Project</h2>
+            <p>
+                A real business website created for a local transport service.
+            </p>
+        </div>
 
 
-<div class="portfolio-grid">
+        <div class="portfolio-grid">
+
+            <div class="glass project-card">
+
+                <div class="project-preview">
+                    <div>
+                        <div style="font-size:48px;margin-bottom:10px;">🚚</div>
+                        <h3>Rakesh Kumar Transport</h3>
+                        <div style="margin-top:8px;color:#bfdbfe;">
+                            Lucknow • Goods Transportation
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>Rakesh Kumar Transport</h3>
+
+                    <p>
+                        A professional local transport website designed to
+                        present services, routes, pricing and direct contact
+                        options for customers.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Business Website</span>
+                        <span class="tag">Local Business</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">SEO</span>
+                    </div>
+
+                    <a href="https://ajeetweb2026.github.io/rakesh-transport-lucknow/"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn btn-primary">
+                        View Live Project →
+                    </a>
+
+                </div>
+
+            </div>
 
 
-<!-- RAKESH PROJECT -->
+            <div class="glass project-card">
 
-<div class="project">
+                <div class="project-preview">
+                    <div>
+                        <div style="font-size:48px;margin-bottom:10px;">💻</div>
+                        <h3>Ajeet Web Services</h3>
+                        <div style="margin-top:8px;color:#bfdbfe;">
+                            Professional Web Solutions
+                        </div>
+                    </div>
+                </div>
 
-<div class="project-image">
-🚚 RAKESH TRANSPORT
-</div>
+                <div class="project-body">
 
-<div class="project-content">
+                    <h3>Ajeet Web Services</h3>
 
-<h3>Rakesh Kumar Transport</h3>
+                    <p>
+                        Our own professional service website created to
+                        showcase web development, design and digital solutions.
+                    </p>
 
-<p>
-A professional transport website created for a local goods transportation business in Lucknow.
-</p>
+                    <div class="tags">
+                        <span class="tag">Web Design</span>
+                        <span class="tag">Development</span>
+                        <span class="tag">SEO</span>
+                    </div>
 
-<div class="tags">
+                    <a href="#home"
+                       class="btn btn-primary">
+                        Current Website →
+                    </a>
 
-<span class="tag">Website</span>
-<span class="tag">Local Business</span>
-<span class="tag">SEO</span>
-<span class="tag">Mobile</span>
+                </div>
 
-</div>
+            </div>
 
-<a href="https://ajeetweb2026.github.io/rakesh-transport-lucknow/" target="_blank" class="btn btn-primary">
-View Live Project →
-</a>
+        </div>
 
-</div>
-
-</div>
-
-
-<!-- AJEET PROJECT -->
-
-<div class="project">
-
-<div class="project-image">
-💻 AJEET WEB
-</div>
-
-<div class="project-content">
-
-<h3>Ajeet Web Services</h3>
-
-<p>
-A professional service website created to provide website development and digital services to businesses.
-</p>
-
-<div class="tags">
-
-<span class="tag">Web Design</span>
-<span class="tag">Development</span>
-<span class="tag">SEO</span>
-
-</div>
-
-<a href="#home" class="btn btn-primary">
-Current Project →
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
 
 <!-- PROCESS -->
-
 <section>
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
-
-<span>HOW IT WORKS</span>
-
-<h2>Our Simple Process</h2>
-
-<p>
-From idea to live website in a simple process.
-</p>
-
-</div>
+        <div class="section-head">
+            <div class="eyebrow">Process</div>
+            <h2>How We Build Your Website</h2>
+            <p>
+                A simple process from your idea to a professional live website.
+            </p>
+        </div>
 
 
-<div class="process">
+        <div class="process-grid">
 
-<div class="step">
+            <div class="glass step-card">
+                <div class="step-number">1</div>
+                <h3>Discuss</h3>
+                <p>Understand your business and requirements.</p>
+            </div>
 
-<div class="step-number">1</div>
+            <div class="glass step-card">
+                <div class="step-number">2</div>
+                <h3>Design</h3>
+                <p>Create the structure and visual direction.</p>
+            </div>
 
-<h3>Discuss</h3>
+            <div class="glass step-card">
+                <div class="step-number">3</div>
+                <h3>Develop</h3>
+                <p>Build the website and optimize the layout.</p>
+            </div>
 
-<p>
-Understand your business and requirements.
-</p>
+            <div class="glass step-card">
+                <div class="step-number">4</div>
+                <h3>Launch</h3>
+                <p>Publish the website and make it ready for customers.</p>
+            </div>
 
-</div>
+        </div>
 
-
-<div class="step">
-
-<div class="step-number">2</div>
-
-<h3>Design</h3>
-
-<p>
-Create a modern website structure and design.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">3</div>
-
-<h3>Develop</h3>
-
-<p>
-Build and optimize your website.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">4</div>
-
-<h3>Launch</h3>
-
-<p>
-Publish your website and make it ready for customers.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
 
 <!-- WHY US -->
-
 <section>
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
-
-<span>WHY US</span>
-
-<h2>Built For Small Businesses</h2>
-
-<p>
-A professional website doesn't have to be complicated.
-</p>
-
-</div>
+        <div class="section-head">
+            <div class="eyebrow">Why Ajeet Web Services</div>
+            <h2>Built Around Your Business</h2>
+            <p>
+                Your website should explain your business clearly and make
+                it easy for customers to contact you.
+            </p>
+        </div>
 
 
-<div class="cards">
+        <div class="why-grid">
 
-<div class="card">
+            <div class="glass why-card">
 
-<div class="icon">💰</div>
+                <h3>Professional First Impression</h3>
 
-<h3>Affordable</h3>
+                <p>
+                    A clean modern website helps visitors understand your
+                    services quickly.
+                </p>
 
-<p>
-Professional websites starting from ₹2,999.
-</p>
+                <ul class="check-list">
+                    <li>✓ Modern visual design</li>
+                    <li>✓ Clear service presentation</li>
+                    <li>✓ Mobile-friendly structure</li>
+                    <li>✓ Easy customer contact</li>
+                </ul>
 
-</div>
-
-
-<div class="card">
-
-<div class="icon">📲</div>
-
-<h3>WhatsApp Ready</h3>
-
-<p>
-Customers can directly contact your business through WhatsApp.
-</p>
-
-</div>
+            </div>
 
 
-<div class="card">
+            <div class="glass why-card">
 
-<div class="icon">🔍</div>
+                <h3>Made For Small Businesses</h3>
 
-<h3>Google Friendly</h3>
+                <p>
+                    We focus on practical websites that are affordable,
+                    simple and useful for real businesses.
+                </p>
 
-<p>
-Website structure prepared with search engines in mind.
-</p>
+                <ul class="check-list">
+                    <li>✓ Affordable packages</li>
+                    <li>✓ WhatsApp integration</li>
+                    <li>✓ SEO-ready foundation</li>
+                    <li>✓ Custom business sections</li>
+                </ul>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
+    </div>
 </section>
 
 
 <!-- FAQ -->
-
 <section id="faq">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
-
-<span>FAQ</span>
-
-<h2>Frequently Asked Questions</h2>
-
-</div>
+        <div class="section-head">
+            <div class="eyebrow">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+        </div>
 
 
-<div class="faq">
+        <div class="faq">
 
-<details>
+            <details class="glass">
+                <summary>What is the starting price of a website?</summary>
+                <p>
+                    Our website packages start from ₹4,499. The final price
+                    depends on the number of pages and features required.
+                </p>
+            </details>
 
-<summary>How much does a website cost?</summary>
+            <details class="glass">
+                <summary>Will my website work on mobile?</summary>
+                <p>
+                    Yes. The website layout is designed to adapt to mobile,
+                    tablet and desktop screens.
+                </p>
+            </details>
 
-<p>
-Our starter websites begin from ₹2,999. Final pricing depends on the required features and pages.
-</p>
+            <details class="glass">
+                <summary>Can you add WhatsApp to my website?</summary>
+                <p>
+                    Yes. A WhatsApp button can be added so customers can
+                    contact your business directly.
+                </p>
+            </details>
 
-</details>
+            <details class="glass">
+                <summary>Can you create a website for a local business?</summary>
+                <p>
+                    Yes. We can create websites for transport services,
+                    shops, freelancers, service providers and other local businesses.
+                </p>
+            </details>
 
+            <details class="glass">
+                <summary>Can you help with Google indexing?</summary>
+                <p>
+                    Yes. We can prepare the website with basic SEO elements
+                    and a search-friendly structure.
+                </p>
+            </details>
 
-<details>
+        </div>
 
-<summary>Will the website work on mobile?</summary>
-
-<p>
-Yes. Websites are designed to work across mobile, tablet and desktop devices.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>Can you help with Google indexing?</summary>
-
-<p>
-Yes. We can prepare the website structure and basic SEO elements needed for search engine indexing.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>Can customers contact me through WhatsApp?</summary>
-
-<p>
-Yes. WhatsApp buttons can be integrated directly into the website.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>Can you create a website for my local business?</summary>
-
-<p>
-Yes. Websites can be created for transport, shops, services, freelancers and other small businesses.
-</p>
-
-</details>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
 
 <!-- CTA -->
-
 <section>
 
-<div class="container">
+    <div class="container">
 
-<div class="cta">
+        <div class="cta">
 
-<h2>Ready to Take Your Business Online?</h2>
+            <h2>Ready To Build Your Website?</h2>
 
-<p>
-Let's build a professional website that gives your business a strong online presence.
-</p>
+            <p>
+                Let's create a professional online presence for your business.
+            </p>
 
-<a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20build%20a%20website." class="btn">
-Start Your Project →
-</a>
+            <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20discuss%20a%20website%20project."
+               class="btn btn-glass">
+                Start Your Project →
+            </a>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
 <!-- CONTACT -->
-
 <section id="contact">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
-
-<span>CONTACT</span>
-
-<h2>Let's Work Together</h2>
-
-<p>
-Tell us about your business and website requirements.
-</p>
-
-</div>
+        <div class="section-head">
+            <div class="eyebrow">Contact</div>
+            <h2>Let's Work Together</h2>
+            <p>
+                Contact us and tell us about your business website requirements.
+            </p>
+        </div>
 
 
-<div class="contact-box">
+        <div class="contact-grid">
 
-<div class="contact-card">
+            <div class="glass contact-card">
 
-<h3>Ajeet Web Services</h3>
+                <h3>Ajeet Web Services</h3>
 
-<p style="color:#6b7280;margin-top:10px;">
-Professional Website Development & Digital Services
-</p>
+                <p>
+                    Professional website development and digital services
+                    for businesses.
+                </p>
 
-<div class="contact-item">
+                <div class="contact-row">
+                    <strong>📱 Phone / WhatsApp</strong>
+                    <a href="tel:+917042913221">
+                        +91 70429 13221
+                    </a>
+                </div>
 
-<strong>📱 Phone / WhatsApp</strong>
+                <div class="contact-row">
+                    <strong>💬 WhatsApp</strong>
+                    <a href="https://wa.me/917042913221">
+                        Chat Directly
+                    </a>
+                </div>
 
-<a href="tel:+917042913221">
-+91 70429 13221
-</a>
+                <div class="contact-row">
+                    <strong>💰 Starting Price</strong>
+                    <span>₹4,499</span>
+                </div>
 
-</div>
-
-
-<div class="contact-item">
-
-<strong>💬 WhatsApp</strong>
-
-<a href="https://wa.me/917042913221">
-Chat on WhatsApp
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>🌐 Website</strong>
-
-<span>Ajeet Web Services</span>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="contact-card">
+            <div class="glass contact-card">
 
-<h3>Start Your Project</h3>
+                <h3>Start Your Project</h3>
 
-<p style="color:#6b7280;margin:12px 0 22px;">
-Send your requirements directly on WhatsApp.
-</p>
+                <p>
+                    Send your requirements directly on WhatsApp and
+                    discuss your website.
+                </p>
 
-<a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20discuss%20a%20website%20project." class="btn btn-primary">
-💬 Contact on WhatsApp
-</a>
+                <div style="margin-top:22px;">
+                    <a href="https://wa.me/917042913221?text=Hello%20Ajeet%20Web%20Services%2C%20I%20want%20to%20build%20a%20website."
+                       class="btn btn-primary">
+                        💬 Contact on WhatsApp
+                    </a>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
+    </div>
 </section>
+
+</main>
 
 
 <!-- FOOTER -->
-
 <footer>
 
-<div class="container">
+    <div class="container">
 
-<div class="footer-grid">
+        <div class="footer-grid">
 
-<div>
+            <div>
+                <h3>Ajeet Web Services</h3>
+                <p>
+                    Professional websites for small businesses,
+                    local businesses and growing brands.
+                </p>
+            </div>
 
-<h3>Ajeet Web Services</h3>
+            <div>
+                <h3>Quick Links</h3>
 
-<p>
-Professional websites for small businesses and growing brands.
-</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#portfolio">Portfolio</a>
+                </div>
+            </div>
 
-</div>
+            <div>
+                <h3>Contact</h3>
 
+                <div class="footer-links">
+                    <a href="tel:+917042913221">
+                        +91 70429 13221
+                    </a>
 
-<div>
+                    <a href="https://wa.me/917042913221">
+                        WhatsApp
+                    </a>
 
-<h3>Quick Links</h3>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
 
-<div class="footer-links">
-
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#portfolio">Portfolio</a>
-
-</div>
-
-</div>
-
-
-<div>
-
-<h3>Contact</h3>
-
-<div class="footer-links">
-
-<a href="tel:+917042913221">+91 70429 13221</a>
-
-<a href="https://wa.me/917042913221">
-WhatsApp
-</a>
-
-<a href="#contact">
-Contact Us
-</a>
-
-</div>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="copyright">
+        <div class="copyright">
+            © 2026 Ajeet Web Services. All Rights Reserved.
+        </div>
 
-© 2026 Ajeet Web Services. All Rights Reserved.
-
-</div>
-
-</div>
+    </div>
 
 </footer>
 
