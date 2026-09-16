@@ -1,108 +1,206 @@
-/* =========================================================
-   GLASSMORPHISM WEBSITE DESIGN
-   ========================================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-/* FULL WEBSITE BACKGROUND */
+<meta charset="UTF-8">
+
+<link rel="icon" type="image/png" href="fivicon.png">
+<link rel="apple-touch-icon" href="fivicon.png">
+
+<meta name="google-site-verification" content="RD2ZFbgSxXp3-nWveuBvietVAqFjzmkmr9aZqqI3x6w">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ajeet Web Services | Website Design, Development & SEO</title>
+
+<meta name="description" content="Ajeet Web Services provides professional website design, website development, SEO and local business website solutions. Modern mobile-friendly websites starting from ₹2,999.">
+
+<meta name="keywords" content="Ajeet Web Services, website designer, website development, business website, website designer India, website designer Faridabad, website designer Lucknow, SEO services, local SEO, small business website">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://ajeetweb2026.github.io/ajeet-web-services/">
+
+<meta property="og:title" content="Ajeet Web Services | Professional Website & SEO Services">
+<meta property="og:description" content="Professional websites, SEO and digital solutions for small businesses. Starting from ₹2,999.">
+<meta property="og:url" content="https://ajeetweb2026.github.io/ajeet-web-services/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ajeetweb2026.github.io/ajeet-web-services/ajeet_kumar.jpeg">
+
+<meta name="theme-color" content="#ffffff">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Ajeet Web Services",
+  "url":"https://ajeetweb2026.github.io/ajeet-web-services/",
+  "telephone":"+917042913221",
+  "description":"Professional website design, website development, SEO and local business website solutions.",
+  "image":"https://ajeetweb2026.github.io/ajeet-web-services/ajeet_kumar.jpeg",
+  "priceRange":"₹₹",
+  "areaServed":"India",
+  "serviceType":[
+    "Website Design",
+    "Website Development",
+    "SEO Services",
+    "Local SEO",
+    "Business Website Development",
+    "Mobile Website Development"
+  ],
+  "sameAs":[
+    "https://wa.me/917042913221"
+  ]
+}
+</script>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
   color:#111827;
   line-height:1.6;
-
-  background:
-    linear-gradient(
-      rgba(255,255,255,.72),
-      rgba(255,255,255,.78)
-    ),
-    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85");
-
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
+  background:#eaf2f7;
+  overflow-x:hidden;
 }
 
-
-/* BACKGROUND VISUAL LAYER */
+/* =========================================================
+   GLOBAL BACKGROUND
+========================================================= */
 
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  z-index:-2;
+  z-index:-3;
 
   background-image:
-    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"),
-    url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"),
-    url("https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=900&q=80"),
-    url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80");
-
-  background-repeat:no-repeat;
-
-  background-position:
-    2% 15%,
-    97% 25%,
-    5% 70%,
-    95% 78%;
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=85"),
+    url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1800&q=85"),
+    url("https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1800&q=85"),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85");
 
   background-size:
-    280px,
-    300px,
-    270px,
-    280px;
+    50% 50%,
+    50% 50%,
+    50% 50%,
+    50% 50%;
 
-  opacity:.16;
-  filter:saturate(.75);
-  pointer-events:none;
+  background-position:
+    top left,
+    top right,
+    bottom left,
+    bottom right;
+
+  background-repeat:no-repeat;
 }
-
-
-/* WHITE GLASS OVERLAY */
 
 body::after{
   content:"";
   position:fixed;
   inset:0;
-  z-index:-1;
-
-  background:rgba(255,255,255,.38);
-
-  backdrop-filter:blur(4px);
-  -webkit-backdrop-filter:blur(4px);
-
-  pointer-events:none;
+  z-index:-2;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
 }
 
+/* =========================================================
+   GENERAL
+========================================================= */
 
-/* TOP BAR */
+a{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:92%;
+  max-width:1180px;
+  margin:auto;
+}
+
+section{
+  padding:85px 0;
+  position:relative;
+}
+
+.section-title{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 45px;
+}
+
+.section-title h2{
+  color:#111827;
+  font-size:40px;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+
+.section-title p{
+  color:#4b5563;
+  font-size:17px;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
 
 .topbar{
-  background:rgba(255,255,255,.70);
-  color:#111827;
-
-  border-bottom:1px solid rgba(255,255,255,.65);
-
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-
-  box-shadow:0 5px 20px rgba(15,23,42,.06);
-}
-
-
-/* HEADER */
-
-header{
-  background:rgba(255,255,255,.72);
-  color:#111827;
-
-  border-bottom:1px solid rgba(255,255,255,.7);
-
-  box-shadow:0 8px 30px rgba(15,23,42,.10);
-
+  background:rgba(255,255,255,.82);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
+  color:#111827;
+  text-align:center;
+  padding:9px 15px;
+  font-size:14px;
+  font-weight:800;
+  border-bottom:1px solid rgba(255,255,255,.9);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+
+  border-bottom:1px solid rgba(255,255,255,.85);
+  box-shadow:0 8px 30px rgba(15,23,42,.08);
+}
+
+.nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
+  font-size:23px;
+  font-weight:900;
   color:#111827;
 }
 
@@ -110,75 +208,128 @@ header{
   color:#2563eb;
 }
 
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:23px;
+}
+
 .nav-links a{
-  color:#111827;
+  color:#1f2937;
+  font-size:14px;
+  font-weight:800;
 }
 
 .nav-links a:hover{
   color:#2563eb;
 }
 
+.nav-btn{
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+  color:white;
+  padding:11px 20px;
+  border-radius:30px;
+  font-weight:800;
+  box-shadow:0 8px 22px rgba(37,99,235,.25);
+}
+
+/* =========================================================
+   GLASS
+========================================================= */
+
+.glass{
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(255,255,255,.82);
+  box-shadow:
+    0 15px 45px rgba(15,23,42,.10),
+    inset 0 1px 0 rgba(255,255,255,.85);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero{
-  min-height:650px;
-
-  color:#111827;
+  min-height:700px;
+  display:flex;
+  align-items:center;
+  padding:100px 0;
+  position:relative;
+  overflow:hidden;
 
   background:
     linear-gradient(
-      rgba(255,255,255,.72),
+      rgba(255,255,255,.66),
       rgba(255,255,255,.80)
     ),
     url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=85");
 
   background-size:cover;
   background-position:center;
-
-  border-bottom:1px solid rgba(255,255,255,.7);
 }
-
-
-/* HERO IMAGE VISUALS */
 
 .hero::before{
-  opacity:.13;
-
-  background-image:
-    url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"),
-    url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80"),
-    url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"),
-    url("https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=700&q=80");
-
-  filter:saturate(.65);
+  content:"";
+  position:absolute;
+  width:450px;
+  height:450px;
+  border-radius:50%;
+  background:rgba(37,99,235,.12);
+  filter:blur(70px);
+  top:-180px;
+  right:-120px;
 }
-
-
-/* REMOVE DARK HERO GLOW */
 
 .hero::after{
-  background:
-    radial-gradient(
-      circle at 82% 18%,
-      rgba(37,99,235,.10),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 12% 80%,
-      rgba(14,165,233,.10),
-      transparent 30%
-    );
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  border-radius:50%;
+  background:rgba(16,185,129,.12);
+  filter:blur(70px);
+  bottom:-160px;
+  left:-100px;
 }
 
+.hero .container{
+  position:relative;
+  z-index:2;
+}
 
-/* HERO TEXT */
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:55px;
+  align-items:center;
+}
+
+.hero-content{
+  padding:38px;
+  border-radius:30px;
+}
+
+.badge{
+  display:inline-block;
+  color:#1d4ed8;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(37,99,235,.18);
+  padding:8px 15px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:900;
+  margin-bottom:20px;
+  box-shadow:0 8px 25px rgba(15,23,42,.07);
+}
 
 .hero h1{
+  font-size:58px;
+  line-height:1.05;
+  letter-spacing:-1.8px;
   color:#111827;
-  text-shadow:0 3px 15px rgba(255,255,255,.7);
+  margin-bottom:20px;
 }
 
 .hero h1 span{
@@ -186,398 +337,1451 @@ header{
 }
 
 .hero p{
-  color:#334155;
+  max-width:690px;
+  color:#374151;
+  font-size:19px;
+  margin-bottom:25px;
+}
+
+.hero-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-bottom:25px;
+}
+
+.hero-points span{
+  background:rgba(255,255,255,.70);
+  border:1px solid rgba(255,255,255,.95);
+  padding:7px 12px;
+  border-radius:20px;
+  color:#1f2937;
+  font-size:13px;
+  font-weight:700;
+  box-shadow:0 5px 18px rgba(15,23,42,.06);
 }
 
 .price-highlight{
   color:#1d4ed8;
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:25px;
 }
 
-
-/* HERO POINTS */
-
-.hero-points span{
-  background:rgba(255,255,255,.60);
-  border:1px solid rgba(255,255,255,.8);
-  color:#111827;
-
-  box-shadow:0 5px 20px rgba(15,23,42,.06);
-
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
 }
 
-
-/* BADGE */
-
-.badge{
-  color:#1d4ed8;
-
-  background:rgba(255,255,255,.65);
-
-  border:1px solid rgba(37,99,235,.20);
-
-  box-shadow:0 5px 20px rgba(15,23,42,.06);
-
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+.btn{
+  display:inline-block;
+  padding:14px 23px;
+  border-radius:12px;
+  font-weight:800;
+  transition:.25s;
 }
 
+.btn:hover{
+  transform:translateY(-3px);
+}
 
-/* HERO CARD */
+.btn-primary{
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+  color:white;
+  box-shadow:0 10px 25px rgba(37,99,235,.24);
+}
+
+.btn-whatsapp{
+  background:#16a34a;
+  color:white;
+  box-shadow:0 10px 25px rgba(22,163,74,.20);
+}
+
+.btn-dark{
+  background:#111827;
+  color:white;
+}
+
+/* HERO IMAGE */
 
 .hero-card{
-  background:rgba(255,255,255,.45);
-
-  border:1px solid rgba(255,255,255,.75);
-
-  box-shadow:
-    0 25px 70px rgba(15,23,42,.16),
-    inset 0 1px 0 rgba(255,255,255,.8);
-
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+  padding:14px;
+  border-radius:30px;
+  transform:rotate(1deg);
 }
 
+.hero-card img{
+  width:100%;
+  height:410px;
+  object-fit:cover;
+  border-radius:22px;
+}
 
 /* =========================================================
-   GLASS SECTIONS
-   ========================================================= */
-
-.trust,
-.services,
-.about,
-.portfolio,
-section{
-  background:transparent;
-}
-
-
-/* TRUST */
+   TRUST
+========================================================= */
 
 .trust{
-  background:rgba(255,255,255,.48);
-
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-
-  border-bottom:1px solid rgba(255,255,255,.65);
+  padding:25px 0;
 }
 
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
 
-/* SECTION TITLES */
+.trust-item{
+  text-align:center;
+  padding:22px 15px;
+  border-radius:18px;
+}
 
-.section-title h2{
+.trust-item strong{
+  display:block;
   color:#111827;
+  font-size:20px;
 }
 
-.section-title p{
-  color:#475569;
+.trust-item span{
+  color:#6b7280;
+  font-size:13px;
 }
-
 
 /* =========================================================
-   GLASS CARDS
-   ========================================================= */
+   SERVICES
+========================================================= */
 
-.card,
-.price-card,
-.step,
-.project,
-.seo-box,
-details{
-
-  background:rgba(255,255,255,.62);
-
-  border:1px solid rgba(255,255,255,.78);
-
-  box-shadow:
-    0 12px 40px rgba(15,23,42,.08),
-    inset 0 1px 0 rgba(255,255,255,.75);
-
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-
-/* CARD HOVER */
-
-.card:hover,
-.price-card:hover,
-.step:hover{
-
-  background:rgba(255,255,255,.76);
-
-  box-shadow:
-    0 20px 45px rgba(15,23,42,.12),
-    inset 0 1px 0 rgba(255,255,255,.9);
+.card{
+  padding:30px 25px;
+  border-radius:22px;
+  transition:.25s;
 }
 
-
-/* ICON */
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 22px 50px rgba(15,23,42,.13);
+}
 
 .icon{
-  background:rgba(255,255,255,.70);
-
-  border:1px solid rgba(255,255,255,.8);
-
-  box-shadow:0 5px 15px rgba(15,23,42,.06);
+  width:58px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(239,246,255,.85);
+  border:1px solid rgba(191,219,254,.7);
+  border-radius:16px;
+  font-size:29px;
+  margin-bottom:18px;
 }
 
+.card h3{
+  color:#111827;
+  font-size:20px;
+  margin-bottom:9px;
+}
+
+.card p{
+  color:#4b5563;
+}
 
 /* =========================================================
    ABOUT
-   ========================================================= */
+========================================================= */
 
-.about{
-  background:rgba(255,255,255,.30);
+.about-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:55px;
+  align-items:center;
 }
 
 .about-image{
-  background:rgba(255,255,255,.45);
+  padding:15px;
+  border-radius:28px;
+}
 
-  border:1px solid rgba(255,255,255,.75);
+.about-image img{
+  width:100%;
+  max-height:430px;
+  object-fit:cover;
+  border-radius:20px;
+}
 
-  box-shadow:0 15px 40px rgba(15,23,42,.10);
-
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+.about-content{
+  padding:35px;
+  border-radius:28px;
 }
 
 .about-content h2{
+  font-size:40px;
   color:#111827;
+  margin-bottom:15px;
 }
 
 .about-content p{
-  color:#475569;
+  color:#4b5563;
+  font-size:17px;
+  margin-bottom:15px;
+}
+
+.check-list{
+  list-style:none;
+  margin:20px 0 28px;
 }
 
 .check-list li{
-  color:#1e293b;
+  margin:11px 0;
+  color:#374151;
+  font-weight:700;
 }
 
-
 /* =========================================================
-   WHY SECTION
-   ========================================================= */
+   WHY
+========================================================= */
 
 .why{
-  background:rgba(255,255,255,.42);
-  color:#111827;
-
-  border-top:1px solid rgba(255,255,255,.6);
-  border-bottom:1px solid rgba(255,255,255,.6);
-
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-}
-
-.why .section-title h2{
-  color:#111827;
-}
-
-.why .section-title p{
-  color:#475569;
-}
-
-.why-card{
-  background:rgba(255,255,255,.60);
-
-  border:1px solid rgba(255,255,255,.8);
-
-  box-shadow:
-    0 12px 35px rgba(15,23,42,.08),
-    inset 0 1px 0 rgba(255,255,255,.8);
-
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-}
-
-.why-card h3{
-  color:#111827;
-}
-
-.why-card p{
-  color:#475569;
-}
-
-
-/* =========================================================
-   PRICING
-   ========================================================= */
-
-.price-card h3{
-  color:#111827;
-}
-
-.price-card li{
-  color:#334155;
-}
-
-.price{
-  color:#2563eb;
-}
-
-.price-card.popular{
-  background:rgba(255,255,255,.75);
-
-  border:2px solid rgba(37,99,235,.45);
-
-  box-shadow:
-    0 20px 50px rgba(37,99,235,.14),
-    inset 0 1px 0 rgba(255,255,255,.9);
-}
-
-
-/* =========================================================
-   PORTFOLIO
-   ========================================================= */
-
-.portfolio{
-  background:rgba(255,255,255,.30);
-}
-
-.project{
-  background:rgba(255,255,255,.65);
-}
-
-
-/* =========================================================
-   SEO
-   ========================================================= */
-
-.seo-item{
-  background:rgba(255,255,255,.50);
-
-  border:1px solid rgba(255,255,255,.70);
-
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-}
-
-.seo-item h3{
-  color:#111827;
-}
-
-.seo-item p{
-  color:#475569;
-}
-
-
-/* =========================================================
-   FAQ
-   ========================================================= */
-
-details{
-  background:rgba(255,255,255,.62);
-}
-
-summary{
-  color:#111827;
-}
-
-details p{
-  color:#475569;
-}
-
-
-/* =========================================================
-   CTA
-   ========================================================= */
-
-.cta{
   background:
     linear-gradient(
-      rgba(255,255,255,.58),
-      rgba(255,255,255,.68)
+      rgba(255,255,255,.68),
+      rgba(255,255,255,.78)
     ),
     url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=85");
 
   background-size:cover;
   background-position:center;
+}
 
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.why-card{
+  padding:28px;
+  border-radius:20px;
+}
+
+.why-card h3{
   color:#111827;
+  margin-bottom:8px;
+}
 
-  border-top:1px solid rgba(255,255,255,.7);
+.why-card p{
+  color:#4b5563;
+}
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.price-card{
+  padding:34px 27px;
+  border-radius:24px;
+  position:relative;
+}
+
+.price-card.popular{
+  border:2px solid rgba(37,99,235,.65);
+  transform:scale(1.04);
+  box-shadow:0 25px 60px rgba(37,99,235,.16);
+}
+
+.popular-label{
+  position:absolute;
+  top:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#2563eb;
+  color:white;
+  padding:6px 18px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.price-card h3{
+  color:#111827;
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.price{
+  color:#2563eb;
+  font-size:40px;
+  font-weight:900;
+  margin-bottom:20px;
+}
+
+.price-card ul{
+  list-style:none;
+  margin-bottom:25px;
+}
+
+.price-card li{
+  margin:12px 0;
+  color:#374151;
+}
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.step{
+  padding:30px;
+  border-radius:22px;
+  text-align:center;
+}
+
+.step-number{
+  width:58px;
+  height:58px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:23px;
+  font-weight:900;
+}
+
+.step h3{
+  color:#111827;
+}
+
+.step p{
+  color:#4b5563;
+  margin-top:8px;
+}
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio{
+  background:
+    linear-gradient(
+      rgba(255,255,255,.66),
+      rgba(255,255,255,.78)
+    ),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.project{
+  max-width:850px;
+  margin:auto;
+  padding:38px;
+  text-align:center;
+  border-radius:28px;
+}
+
+.project-icon{
+  font-size:48px;
+  margin-bottom:8px;
+}
+
+.project h3{
+  color:#111827;
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.project p{
+  color:#4b5563;
+  margin-bottom:22px;
+}
+
+/* =========================================================
+   SEO
+========================================================= */
+
+.seo-box{
+  padding:35px;
+  border-radius:24px;
+}
+
+.seo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.seo-item{
+  background:rgba(248,250,252,.70);
+  border:1px solid rgba(255,255,255,.9);
+  padding:20px;
+  border-radius:17px;
+}
+
+.seo-item h3{
+  color:#111827;
+  margin-bottom:5px;
+}
+
+.seo-item p{
+  color:#4b5563;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  background:rgba(255,255,255,.65);
+  margin-bottom:12px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.85);
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(15,23,42,.06);
+  backdrop-filter:blur(14px);
+}
+
+summary{
+  cursor:pointer;
+  font-weight:800;
+  color:#111827;
+}
+
+details p{
+  color:#4b5563;
+  margin-top:10px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+  background:
+    linear-gradient(
+      rgba(255,255,255,.65),
+      rgba(255,255,255,.78)
+    ),
+    url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1800&q=85");
+
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+}
+
+.cta-box{
+  padding:55px 30px;
+  border-radius:30px;
 }
 
 .cta h2{
+  font-size:42px;
   color:#111827;
+  margin-bottom:12px;
 }
 
 .cta p{
-  color:#334155;
+  color:#4b5563;
+  font-size:18px;
+  margin-bottom:25px;
 }
 
 .contact-number{
   color:#111827;
+  font-size:30px;
+  font-weight:900;
+  margin-bottom:25px;
 }
-
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 footer{
-  background:rgba(255,255,255,.72);
-
-  color:#475569;
-
-  border-top:1px solid rgba(255,255,255,.8);
-
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  color:#4b5563;
+  text-align:center;
+  padding:38px 15px;
+  border-top:1px solid rgba(255,255,255,.9);
 }
 
 footer strong{
   color:#111827;
+  font-size:21px;
+}
+
+.footer-links{
+  margin:15px 0;
 }
 
 .footer-links a{
-  color:#475569;
+  color:#4b5563;
+  margin:0 8px;
+  font-weight:600;
 }
 
 .footer-links a:hover{
   color:#2563eb;
 }
 
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:60px;
+  height:60px;
+  background:#16a34a;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  z-index:2000;
+  transition:.25s;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.08);
+}
 
 /* =========================================================
-   MOBILE BACKGROUND
-   ========================================================= */
+   MOBILE
+========================================================= */
 
-@media(max-width:600px){
+@media(max-width:900px){
 
-  body{
-    background-attachment:scroll;
+  .nav-links{
+    display:none;
   }
 
-  body::before{
-    opacity:.09;
-
-    background-size:
-      170px,
-      180px,
-      160px,
-      170px;
-
-    background-position:
-      0% 10%,
-      100% 25%,
-      0% 70%,
-      100% 85%;
+  .hero-grid,
+  .about-grid{
+    grid-template-columns:1fr;
   }
 
   .hero{
-    background:
-      linear-gradient(
-        rgba(255,255,255,.80),
-        rgba(255,255,255,.86)
-      ),
-      url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80");
+    padding:70px 0;
+  }
 
-    background-size:cover;
-    background-position:center;
+  .hero h1{
+    font-size:45px;
+  }
+
+  .hero-card{
+    transform:none;
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .why-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .pricing{
+    grid-template-columns:1fr;
+  }
+
+  .price-card.popular{
+    transform:none;
+  }
+
+  .process{
+    grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+
+  body::before{
+    background-size:
+      100% 25%,
+      100% 25%,
+      100% 25%,
+      100% 25%;
+
+    background-position:
+      top,
+      33%,
+      66%,
+      bottom;
+  }
+
+  body::after{
+    background:rgba(255,255,255,.78);
+  }
+
+  .container{
+    width:94%;
+  }
+
+  .topbar{
+    font-size:12px;
+  }
+
+  .logo{
+    font-size:19px;
+  }
+
+  .nav-btn{
+    padding:9px 13px;
+    font-size:13px;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  .hero{
+    padding:55px 0;
+    min-height:auto;
+  }
+
+  .hero-content{
+    padding:25px 20px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .hero-card{
+    padding:10px;
+  }
+
+  .hero-card img{
+    height:260px;
+  }
+
+  .cards,
+  .why-grid,
+  .seo-grid,
+  .trust-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2{
+    font-size:30px;
+  }
+
+  .about-content{
+    padding:25px 20px;
+  }
+
+  .about-content h2{
+    font-size:31px;
+  }
+
+  .pricing{
+    grid-template-columns:1fr;
+  }
+
+  .price-card{
+    padding:30px 22px;
+  }
+
+  .cta-box{
+    padding:40px 20px;
+  }
+
+  .cta h2{
+    font-size:30px;
+  }
+
+  .contact-number{
+    font-size:24px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .project{
+    padding:28px 20px;
+  }
+
+  .seo-box{
+    padding:20px;
   }
 
 }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+🚀 Professional Websites • SEO • Local Business Solutions • Starting ₹2,999/-
+</div>
+
+<header>
+
+<div class="container nav">
+
+<div class="logo">
+Ajeet <span>Web Services</span>
+</div>
+
+<nav class="nav-links">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#pricing">Pricing</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#faq">FAQ</a>
+</nav>
+
+<a class="nav-btn" href="#contact">
+Get Website
+</a>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-content glass">
+
+<div class="badge">
+⚡ PROFESSIONAL DIGITAL SERVICES
+</div>
+
+<h1>
+Build Your Business <span>Online</span>
+</h1>
+
+<p>
+Modern, professional and mobile-friendly websites for small businesses,
+shops, local services, transporters and professionals.
+</p>
+
+<div class="hero-points">
+<span>✓ Mobile Friendly</span>
+<span>✓ WhatsApp Integration</span>
+<span>✓ SEO Ready</span>
+<span>✓ Fast Delivery</span>
+</div>
+
+<div class="price-highlight">
+Website Packages Starting From ₹2,999/-
+</div>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="#pricing">
+View Website Packages
+</a>
+
+<a class="btn btn-whatsapp"
+href="https://wa.me/917042913221?text=Hello%20Ajeet%2C%20I%20want%20a%20professional%20website%20for%20my%20business.">
+💬 WhatsApp Now
+</a>
+
+<a class="btn btn-dark" href="tel:7042913221">
+📞 Call Now
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card glass">
+
+<img
+src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=85"
+alt="Business growth and financial success">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-item glass">
+<strong>₹2,999+</strong>
+<span>Starting Price</span>
+</div>
+
+<div class="trust-item glass">
+<strong>100%</strong>
+<span>Mobile Friendly</span>
+</div>
+
+<div class="trust-item glass">
+<strong>SEO</strong>
+<span>Ready Structure</span>
+</div>
+
+<div class="trust-item glass">
+<strong>Direct</strong>
+<span>WhatsApp Support</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Professional Website Services</h2>
+
+<p>
+Everything your business needs to build a strong online presence.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card glass">
+<div class="icon">💻</div>
+<h3>Website Design</h3>
+<p>
+Modern and professional website design created according to your business.
+</p>
+</div>
+
+<div class="card glass">
+<div class="icon">⚙️</div>
+<h3>Website Development</h3>
+<p>
+Fast, responsive and easy-to-use websites for businesses and professionals.
+</p>
+</div>
+
+<div class="card glass">
+<div class="icon">🔍</div>
+<h3>SEO Services</h3>
+<p>
+SEO-friendly website structure designed to help search engines understand your business.
+</p>
+</div>
+
+<div class="card glass">
+<div class="icon">📍</div>
+<h3>Local SEO</h3>
+<p>
+Build a stronger online presence for your local business and service area.
+</p>
+</div>
+
+<div class="card glass">
+<div class="icon">📱</div>
+<h3>Mobile Friendly</h3>
+<p>
+Your website works smoothly across smartphones, tablets and computers.
+</p>
+</div>
+
+<div class="card glass">
+<div class="icon">💬</div>
+<h3>WhatsApp Integration</h3>
+<p>
+Let customers contact your business directly through WhatsApp and phone.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div class="about-image glass">
+
+<img
+src="ajeet_kumar.jpeg"
+alt="Ajeet Web Services professional">
+
+</div>
+
+<div class="about-content glass">
+
+<h2>Websites That Help Businesses Grow</h2>
+
+<p>
+Ajeet Web Services helps small businesses, shops, local services,
+transporters and professionals build a professional presence online.
+</p>
+
+<p>
+Our goal is simple: create websites that look professional,
+work smoothly on mobile devices and make it easy for customers
+to contact your business.
+</p>
+
+<ul class="check-list">
+
+<li>✓ Professional modern design</li>
+<li>✓ Mobile-friendly layout</li>
+<li>✓ WhatsApp and Call integration</li>
+<li>✓ SEO-ready structure</li>
+<li>✓ Affordable website packages</li>
+<li>✓ Direct customer support</li>
+
+</ul>
+
+<a class="btn btn-primary" href="#contact">
+Start Your Website
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Why Choose Ajeet Web Services?</h2>
+
+<p>
+Simple, affordable and professional solutions for growing businesses.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card glass">
+<h3>💰 Affordable Pricing</h3>
+<p>
+Professional website packages starting from ₹2,999.
+</p>
+</div>
+
+<div class="why-card glass">
+<h3>📱 Mobile First</h3>
+<p>
+Your customers can easily browse your website from their phones.
+</p>
+</div>
+
+<div class="why-card glass">
+<h3>⚡ Fast Delivery</h3>
+<p>
+Get your business website developed and published efficiently.
+</p>
+</div>
+
+<div class="why-card glass">
+<h3>🔍 SEO Ready</h3>
+<p>
+Clean structure and important SEO elements are included.
+</p>
+</div>
+
+<div class="why-card glass">
+<h3>💬 Direct Contact</h3>
+<p>
+Customers can contact your business directly through WhatsApp or phone.
+</p>
+</div>
+
+<div class="why-card glass">
+<h3>🛠️ Easy Updates</h3>
+<p>
+Website content and sections can be updated as your business grows.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Website Packages</h2>
+
+<p>
+Choose the package that fits your business requirements.
+</p>
+
+</div>
+
+<div class="pricing">
+
+<div class="price-card glass">
+
+<h3>Starter</h3>
+
+<div class="price">₹2,999</div>
+
+<ul>
+<li>✓ Professional Website</li>
+<li>✓ Mobile Friendly Design</li>
+<li>✓ WhatsApp Button</li>
+<li>✓ Call Button</li>
+<li>✓ Basic SEO</li>
+<li>✓ Business Information</li>
+</ul>
+
+<a class="btn btn-primary"
+href="https://wa.me/917042913221?text=Hello%20Ajeet%2C%20I%20want%20the%20Starter%20website%20package.">
+Choose Starter
+</a>
+
+</div>
+
+
+<div class="price-card glass popular">
+
+<div class="popular-label">
+MOST POPULAR
+</div>
+
+<h3>Professional</h3>
+
+<div class="price">₹4,999</div>
+
+<ul>
+<li>✓ Everything in Starter</li>
+<li>✓ Premium Design</li>
+<li>✓ Multiple Sections</li>
+<li>✓ Portfolio Section</li>
+<li>✓ Advanced SEO Setup</li>
+<li>✓ Custom Business Content</li>
+</ul>
+
+<a class="btn btn-primary"
+href="https://wa.me/917042913221?text=Hello%20Ajeet%2C%20I%20want%20the%20Professional%20website%20package.">
+Choose Professional
+</a>
+
+</div>
+
+
+<div class="price-card glass">
+
+<h3>Premium</h3>
+
+<div class="price">₹7,999</div>
+
+<ul>
+<li>✓ Everything in Professional</li>
+<li>✓ Advanced Website Design</li>
+<li>✓ Custom Features</li>
+<li>✓ Business Branding</li>
+<li>✓ Advanced Sections</li>
+<li>✓ Priority Support</li>
+</ul>
+
+<a class="btn btn-primary"
+href="https://wa.me/917042913221?text=Hello%20Ajeet%2C%20I%20want%20the%20Premium%20website%20package.">
+Choose Premium
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>How It Works</h2>
+
+<p>
+Getting your professional website online is simple.
+</p>
+
+</div>
+
+<div class="process">
+
+<div class="step glass">
+
+<div class="step-number">1</div>
+
+<h3>Share Requirement</h3>
+
+<p>
+Tell us about your business, services and website requirements.
+</p>
+
+</div>
+
+<div class="step glass">
+
+<div class="step-number">2</div>
+
+<h3>Website Development</h3>
+
+<p>
+We design and develop your professional business website.
+</p>
+
+</div>
+
+<div class="step glass">
+
+<div class="step-number">3</div>
+
+<h3>Go Live</h3>
+
+<p>
+Your website is published and ready for customers.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Recent Work</h2>
+
+<p>
+A live example of a professional website created for a local transport business.
+</p>
+
+</div>
+
+<div class="project glass">
+
+<div class="project-icon">🚚</div>
+
+<h3>Rakesh Kumar Transport</h3>
+
+<p>
+Professional Super Carry goods transport website for a local transport service in Lucknow.
+</p>
+
+<a
+class="btn btn-primary"
+href="https://ajeetweb2026.github.io/rakesh-transport-lucknow/"
+target="_blank"
+rel="noopener">
+View Live Website
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SEO -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Website + SEO Ready</h2>
+
+<p>
+A professional website should look good and also be easy for customers to discover.
+</p>
+
+</div>
+
+<div class="seo-box glass">
+
+<div class="seo-grid">
+
+<div class="seo-item">
+<h3>🔎 Search Engine Friendly</h3>
+<p>
+Clean HTML structure and important SEO elements help search engines understand your website.
+</p>
+</div>
+
+<div class="seo-item">
+<h3>📱 Mobile Optimized</h3>
+<p>
+Responsive design provides a better experience for customers using smartphones.
+</p>
+</div>
+
+<div class="seo-item">
+<h3>📍 Local Business Focus</h3>
+<p>
+Useful for shops, service providers, transporters and other local businesses.
+</p>
+</div>
+
+<div class="seo-item">
+<h3>🚀 Fast & Simple</h3>
+<p>
+Lightweight website structure designed for a smooth browsing experience.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Frequently Asked Questions</h2>
+
+<p>
+Common questions about our website services.
+</p>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>How much does a website cost?</summary>
+<p>
+Our website packages start from ₹2,999.
+</p>
+</details>
+
+<details>
+<summary>Will my website work on mobile?</summary>
+<p>
+Yes. Our websites are designed to work on smartphones, tablets and desktop computers.
+</p>
+</details>
+
+<details>
+<summary>Can customers contact my business through WhatsApp?</summary>
+<p>
+Yes. WhatsApp and Call buttons can be integrated into your website.
+</p>
+</details>
+
+<details>
+<summary>Can you create a website for a local business?</summary>
+<p>
+Yes. We create websites for shops, transporters, service providers, professionals and other local businesses.
+</p>
+</details>
+
+<details>
+<summary>Can I update my website later?</summary>
+<p>
+Yes. Website content, sections and business information can be updated as your business grows.
+</p>
+</details>
+
+<details>
+<summary>How can I start?</summary>
+<p>
+Simply contact us on WhatsApp or call 7042913221 and tell us about your business requirements.
+</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+<div class="container">
+
+<div class="cta-box glass">
+
+<h2>Ready to Take Your Business Online?</h2>
+
+<p>
+Let's build a professional website that helps your business look trustworthy online.
+</p>
+
+<div class="contact-number">
+📞 7042913221
+</div>
+
+<div class="buttons" style="justify-content:center;">
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/917042913221?text=Hello%20Ajeet%2C%20I%20want%20a%20professional%20website%20for%20my%20business.">
+💬 Start on WhatsApp
+</a>
+
+<a
+class="btn"
+style="background:#111827;color:white;"
+href="tel:7042913221">
+📞 Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<strong>Ajeet Web Services</strong>
+</p>
+
+<p>
+Professional Website Design, Development & SEO Services
+</p>
+
+<div class="footer-links">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#pricing">Pricing</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+
+<p>
+📞 7042913221
+</p>
+
+<p style="margin-top:12px;">
+© 2026 Ajeet Web Services. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/917042913221?text=Hello%20Ajeet%2C%20I%20want%20a%20website%20for%20my%20business."
+aria-label="Contact Ajeet Web Services on WhatsApp">
+💬
+</a>
+
+</body>
+</html>
